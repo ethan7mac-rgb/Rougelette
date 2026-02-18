@@ -1,6 +1,6 @@
 ﻿namespace Rougelette
 {
-    partial class Rougelette
+    partial class frmRougelette
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rougelette));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRougelette));
             picChar = new PictureBox();
             lblCharName = new Label();
             picWheel = new PictureBox();
@@ -37,6 +37,7 @@
             lblMoney = new Label();
             lblRound = new Label();
             btnReset = new Button();
+            btnMainMenu = new Button();
             ((System.ComponentModel.ISupportInitialize)picChar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picWheel).BeginInit();
             SuspendLayout();
@@ -123,13 +124,25 @@
             btnReset.TabIndex = 8;
             btnReset.Text = "Reset Game";
             btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
-            // Form1
+            // btnMainMenu
+            // 
+            btnMainMenu.Location = new Point(225, 767);
+            btnMainMenu.Name = "btnMainMenu";
+            btnMainMenu.Size = new Size(125, 51);
+            btnMainMenu.TabIndex = 9;
+            btnMainMenu.Text = "Main Menu";
+            btnMainMenu.UseVisualStyleBackColor = true;
+            btnMainMenu.Click += btnMainMenu_Click;
+            // 
+            // frmRougelette
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(797, 833);
+            Controls.Add(btnMainMenu);
             Controls.Add(btnReset);
             Controls.Add(lblRound);
             Controls.Add(lblMoney);
@@ -138,7 +151,7 @@
             Controls.Add(picWheel);
             Controls.Add(lblCharName);
             Controls.Add(picChar);
-            Name = "Form1";
+            Name = "frmRougelette";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)picChar).EndInit();
             ((System.ComponentModel.ISupportInitialize)picWheel).EndInit();
@@ -156,5 +169,6 @@
         private Label lblMoney;
         private Label lblRound;
         private Button btnReset;
+        private Button btnMainMenu;
     }
 }

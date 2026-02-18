@@ -1,8 +1,8 @@
 namespace Rougelette
 {
-    public partial class Rougelette : Form
+    public partial class frmRougelette : Form
     {
-        public Rougelette()
+        public frmRougelette()
         {
             InitializeComponent();
         }
@@ -11,8 +11,19 @@ namespace Rougelette
 
         private void btnSpin_Click(object sender, EventArgs e)
         {
-                    
+
         }
 
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMainMenu_Click(object sender, EventArgs e)
+        {
+            
+            main.Show();
+            this.Close();
+        }
     }
 }

@@ -52,6 +52,7 @@
             btnNewGame.TabIndex = 1;
             btnNewGame.Text = "New Game";
             btnNewGame.UseVisualStyleBackColor = true;
+            btnNewGame.Click += btnNewGame_Click;
             // 
             // frmMainMenu
             // 

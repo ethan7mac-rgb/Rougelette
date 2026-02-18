@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCharacterSelect));
+            picChar1 = new PictureBox();
             lblCharDesc1 = new Label();
             btnChar1Select = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picChar1).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // picChar1
             // 
-            pictureBox1.Image = Rougelette.Properties.Resources._147469001_6dcf339c_200x200o1;
-            pictureBox1.Location = new Point(343, 69);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(135, 125);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            picChar1.Image = (Image)resources.GetObject("picChar1.Image");
+            picChar1.Location = new Point(343, 113);
+            picChar1.Name = "picChar1";
+            picChar1.Size = new Size(135, 77);
+            picChar1.SizeMode = PictureBoxSizeMode.StretchImage;
+            picChar1.TabIndex = 3;
+            picChar1.TabStop = false;
             // 
             // lblCharDesc1
             // 
@@ -61,6 +62,7 @@
             btnChar1Select.TabIndex = 2;
             btnChar1Select.Text = "Slect This Character";
             btnChar1Select.UseVisualStyleBackColor = true;
+            btnChar1Select.Click += btnChar1Select_Click;
             // 
             // frmCharacterSelect
             // 
@@ -70,16 +72,16 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnChar1Select);
             Controls.Add(lblCharDesc1);
-            Controls.Add(pictureBox1);
+            Controls.Add(picChar1);
             Name = "frmCharacterSelect";
             Text = "CharacterSelect";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picChar1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox picChar1;
         private Label lblCharDesc1;
         private Button btnChar1Select;
     }

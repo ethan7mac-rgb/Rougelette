@@ -16,5 +16,12 @@ namespace Rougelette
         {
             InitializeComponent();
         }
+
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            frmCharacterSelect charSelect = new frmCharacterSelect();
+            charSelect.Show();
+            this.Hide();
+        }
     }
 }

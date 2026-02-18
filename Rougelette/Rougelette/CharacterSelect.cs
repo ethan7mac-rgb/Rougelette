@@ -16,5 +16,16 @@ namespace Rougelette
         {
             InitializeComponent();
         }
+
+        private void btnChar1Select_Click(object sender, EventArgs e)
+        {
+            MainGameSwap();
+        }
+        private void MainGameSwap()
+        {
+            frmRougelette rogue = new frmRougelette();
+            rogue.Show();
+            this.Close();
+        }
     }
 }
