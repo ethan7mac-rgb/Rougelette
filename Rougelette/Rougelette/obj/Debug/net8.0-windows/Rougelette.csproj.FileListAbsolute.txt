@@ -19,7 +19,6 @@ C:\Users\ethan\source\repos\Rougelette\Rougelette\obj\Debug\net8.0-windows\ref\R
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.frmCharacterSelect.resources
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.frmMainMenu.resources
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.Properties.Resources.resources
-C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.Rougelette.resources
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.csproj.GenerateResource.cache
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.AssemblyInfoInputs.cache
@@ -36,3 +35,4 @@ C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rou
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\bin\Debug\net8.0-windows\Rougelette.pdb
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.genruntimeconfig.cache
 C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\ref\Rougelette.dll
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.frmRougelette.resources

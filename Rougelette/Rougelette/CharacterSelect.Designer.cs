@@ -62,6 +62,7 @@
             btnChar1Select.TabIndex = 2;
             btnChar1Select.Text = "Slect This Character";
             btnChar1Select.UseVisualStyleBackColor = true;
+            btnChar1Select.Click += btnChar1Select_Click;
             // 
             // frmCharacterSelect
             // 
