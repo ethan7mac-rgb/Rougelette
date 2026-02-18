@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rougelette")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d59dd54bcffabf64f9b8542aa062a526e9a39c00")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rougelette")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rougelette")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ethan\\source\\repos\\Rougelette\\Rougelette\\Rougelette.csproj": {}
+    "C:\\Users\\ethan\\OneDrive - NBCC\\Desktop\\IT\\source\\repos\\Rougelette\\Rougelette\\Rougelette\\Rougelette.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ethan\\source\\repos\\Rougelette\\Rougelette\\Rougelette.csproj": {
+    "C:\\Users\\ethan\\OneDrive - NBCC\\Desktop\\IT\\source\\repos\\Rougelette\\Rougelette\\Rougelette\\Rougelette.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ethan\\source\\repos\\Rougelette\\Rougelette\\Rougelette.csproj",
+        "projectUniqueName": "C:\\Users\\ethan\\OneDrive - NBCC\\Desktop\\IT\\source\\repos\\Rougelette\\Rougelette\\Rougelette\\Rougelette.csproj",
         "projectName": "Rougelette",
-        "projectPath": "C:\\Users\\ethan\\source\\repos\\Rougelette\\Rougelette\\Rougelette.csproj",
+        "projectPath": "C:\\Users\\ethan\\OneDrive - NBCC\\Desktop\\IT\\source\\repos\\Rougelette\\Rougelette\\Rougelette\\Rougelette.csproj",
         "packagesPath": "C:\\Users\\ethan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ethan\\source\\repos\\Rougelette\\Rougelette\\obj\\",
+        "outputPath": "C:\\Users\\ethan\\OneDrive - NBCC\\Desktop\\IT\\source\\repos\\Rougelette\\Rougelette\\Rougelette\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ethan\\AppData\\Roaming\\NuGet\\NuGet.Config",

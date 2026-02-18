@@ -16,3 +16,23 @@ C:\Users\ethan\source\repos\Rougelette\Rougelette\obj\Debug\net8.0-windows\refin
 C:\Users\ethan\source\repos\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.pdb
 C:\Users\ethan\source\repos\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.genruntimeconfig.cache
 C:\Users\ethan\source\repos\Rougelette\Rougelette\obj\Debug\net8.0-windows\ref\Rougelette.dll
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.frmCharacterSelect.resources
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.frmMainMenu.resources
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.Properties.Resources.resources
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.Rougelette.resources
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.csproj.GenerateResource.cache
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.AssemblyInfoInputs.cache
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.AssemblyInfo.cs
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.csproj.CoreCompileInputs.cache
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.sourcelink.json
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.dll
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\refint\Rougelette.dll
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.pdb
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\bin\Debug\net8.0-windows\Rougelette.exe
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\bin\Debug\net8.0-windows\Rougelette.deps.json
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\bin\Debug\net8.0-windows\Rougelette.runtimeconfig.json
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\bin\Debug\net8.0-windows\Rougelette.dll
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\bin\Debug\net8.0-windows\Rougelette.pdb
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\Rougelette.genruntimeconfig.cache
+C:\Users\ethan\OneDrive - NBCC\Desktop\IT\source\repos\Rougelette\Rougelette\Rougelette\obj\Debug\net8.0-windows\ref\Rougelette.dll
