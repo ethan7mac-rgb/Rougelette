@@ -1,2 +1,2 @@
-# TempNameForOOP_Project
-Bingus gameing
+# Roguelette
+A very cool game about gambling
