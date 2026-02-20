@@ -59,7 +59,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(794, 450);
             Controls.Add(btnNewGame);
             Controls.Add(picTitle);
             Name = "frmMainMenu";

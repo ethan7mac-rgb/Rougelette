@@ -2,12 +2,12 @@ namespace Rougelette
 {
     public partial class frmRougelette : Form
     {
-        public frmRougelette()
+        private frmMainMenu mainMenu;
+        public frmRougelette(frmMainMenu main)
         {
             InitializeComponent();
+            mainMenu = main;
         }
-
-        public static object Properties { get; internal set; }
 
         int RoundCount = 0;
         private void btnSpin_Click(object sender, EventArgs e)
@@ -23,9 +23,8 @@ namespace Rougelette
 
         private void btnMainMenu_Click(object sender, EventArgs e)
         {
-            frmMainMenu main = new frmMainMenu();
-            main.Show();
-            this.Close();
+            mainMenu.Show();
+            this.Hide();
         }
     }
 }

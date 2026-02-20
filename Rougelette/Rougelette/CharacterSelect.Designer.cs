@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCharacterSelect));
             picChar1 = new PictureBox();
             lblCharDesc1 = new Label();
-            btnChar1Select = new Button();
+            btnCowBoySelect = new Button();
             ((System.ComponentModel.ISupportInitialize)picChar1).BeginInit();
             SuspendLayout();
             // 
             // picChar1
             // 
             picChar1.Image = (Image)resources.GetObject("picChar1.Image");
-            picChar1.Location = new Point(343, 113);
+            picChar1.Location = new Point(12, 12);
             picChar1.Name = "picChar1";
             picChar1.Size = new Size(135, 77);
             picChar1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -48,29 +48,31 @@
             // lblCharDesc1
             // 
             lblCharDesc1.ForeColor = SystemColors.ButtonHighlight;
-            lblCharDesc1.Location = new Point(343, 207);
+            lblCharDesc1.Location = new Point(12, 92);
             lblCharDesc1.Name = "lblCharDesc1";
             lblCharDesc1.Size = new Size(135, 50);
             lblCharDesc1.TabIndex = 1;
-            lblCharDesc1.Text = "Sample Char Desc";
+            lblCharDesc1.Text = "Its Lunch Time";
+            lblCharDesc1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnChar1Select
+            // btnCowBoySelect
             // 
-            btnChar1Select.Location = new Point(343, 260);
-            btnChar1Select.Name = "btnChar1Select";
-            btnChar1Select.Size = new Size(135, 26);
-            btnChar1Select.TabIndex = 2;
-            btnChar1Select.Text = "Slect This Character";
-            btnChar1Select.UseVisualStyleBackColor = true;
-            btnChar1Select.Click += btnChar1Select_Click;
+            btnCowBoySelect.Location = new Point(12, 145);
+            btnCowBoySelect.Name = "btnCowBoySelect";
+            btnCowBoySelect.Size = new Size(135, 26);
+            btnCowBoySelect.TabIndex = 2;
+            btnCowBoySelect.Text = "Select the Cowboy";
+            btnCowBoySelect.UseVisualStyleBackColor = true;
+            btnCowBoySelect.Click += btnCowBoySelect_Click;
             // 
             // frmCharacterSelect
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
-            Controls.Add(btnChar1Select);
+            Controls.Add(btnCowBoySelect);
             Controls.Add(lblCharDesc1);
             Controls.Add(picChar1);
             Name = "frmCharacterSelect";
@@ -83,6 +85,6 @@
 
         private PictureBox picChar1;
         private Label lblCharDesc1;
-        private Button btnChar1Select;
+        private Button btnCowBoySelect;
     }
 }
