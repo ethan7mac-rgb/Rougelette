@@ -12,14 +12,21 @@ namespace Rougelette
 {
     public partial class frmMainMenu : Form
     {
+        //DONT TOUCH THIS IDIOTS
+        private frmCharacterSelect charSelect;
+        private frmRougelette rouge;
         public frmMainMenu()
         {
+            //AND THIS
             InitializeComponent();
+            rouge = new frmRougelette(this);
+            charSelect = new frmCharacterSelect(rouge);
+            charSelect.Hide();
+            rouge.Hide();
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            frmCharacterSelect charSelect = new frmCharacterSelect();
             charSelect.Show();
             this.Hide();
         }
