@@ -3,6 +3,8 @@ namespace Rougelette
     public partial class frmRougelette : Form
     {
         private frmMainMenu mainMenu;
+
+        private Character selectedChar;
         public frmRougelette(frmMainMenu main)
         {
             InitializeComponent();
@@ -25,6 +27,15 @@ namespace Rougelette
         {
             mainMenu.Show();
             this.Hide();
+        }
+
+        public void SetChar(Character character)
+        {
+            selectedChar = character;
+
+            lblCharName.Text = selectedChar.Name;
+            lblCoins.Text = selectedChar.StartingMoney.ToString();
+
         }
     }
 }
