@@ -1,11 +1,14 @@
 items that can be added per rougelike run
++ is easy and will do
+- is hard and wont do
+* is maybe
 ________________________________________________
- - Item that makes you have an extra respin per round
- - Item that gives you a 2x money reward
- - Item that can make you cheat "death" once
- - Item that can make you have rarer/lucky roulette wins
- - Item that gives you a double or nothing feature per slot win/lose
- - Item that can give you more event chances (maybe)
- - Item that can give you a colour of both red + white so if you hit that number you win no matter what with said selected number
- - Item that can make you change your bid once per game (maybe?)
- - Item that can make you bid mutliple different times, but if you lose you lose double the amount 
+ - Item that makes you have an extra respin per round +
+ - Item that gives you a 2x money reward * mostly for balance
+ - Item that can make you cheat "death" once * see above
+ - Item that can make you have rarer/lucky roulette wins * leaning to a no unclear as to how it would be implemented
+ - Item that gives you a double or nothing feature per slot win/lose - likely going to be a character feature or base part of the game
+ - Item that can give you more event chances (maybe) * depends if events are added
+ - Item that can give you a colour of both red + white so if you hit that number you win no matter what with said selected number + PRIORITY ONE FOR WHEN SHOP ADDED
+ - Item that can make you change your bid once per game (maybe?) + cool one time use item
+ - Item that can make you bid mutliple different times, but if you lose you lose double the amount * maybe better as a character feature
