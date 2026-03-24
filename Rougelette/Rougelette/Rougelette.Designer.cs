@@ -47,9 +47,10 @@
             // picChar
             // 
             picChar.Image = (Image)resources.GetObject("picChar.Image");
-            picChar.Location = new Point(600, 12);
+            picChar.Location = new Point(686, 16);
+            picChar.Margin = new Padding(3, 4, 3, 4);
             picChar.Name = "picChar";
-            picChar.Size = new Size(185, 167);
+            picChar.Size = new Size(211, 223);
             picChar.SizeMode = PictureBoxSizeMode.StretchImage;
             picChar.TabIndex = 0;
             picChar.TabStop = false;
@@ -60,27 +61,29 @@
             lblCharName.BackColor = SystemColors.ActiveCaptionText;
             lblCharName.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCharName.ForeColor = SystemColors.ButtonHighlight;
-            lblCharName.Location = new Point(600, 196);
+            lblCharName.Location = new Point(686, 261);
             lblCharName.Name = "lblCharName";
-            lblCharName.Size = new Size(185, 37);
+            lblCharName.Size = new Size(228, 46);
             lblCharName.TabIndex = 1;
             lblCharName.Text = "lblCharName";
             // 
             // picWheel
             // 
             picWheel.Image = (Image)resources.GetObject("picWheel.Image");
-            picWheel.Location = new Point(31, 237);
+            picWheel.Location = new Point(35, 142);
+            picWheel.Margin = new Padding(3, 4, 3, 4);
             picWheel.Name = "picWheel";
-            picWheel.Size = new Size(512, 513);
+            picWheel.Size = new Size(585, 684);
             picWheel.SizeMode = PictureBoxSizeMode.StretchImage;
             picWheel.TabIndex = 3;
             picWheel.TabStop = false;
             // 
             // btnSpin
             // 
-            btnSpin.Location = new Point(31, 767);
+            btnSpin.Location = new Point(35, 848);
+            btnSpin.Margin = new Padding(3, 4, 3, 4);
             btnSpin.Name = "btnSpin";
-            btnSpin.Size = new Size(125, 51);
+            btnSpin.Size = new Size(143, 68);
             btnSpin.TabIndex = 4;
             btnSpin.Text = "Spin Da Weel";
             btnSpin.UseVisualStyleBackColor = true;
@@ -89,11 +92,11 @@
             // lstItemDisplay
             // 
             lstItemDisplay.FormattingEnabled = true;
-            lstItemDisplay.ItemHeight = 15;
             lstItemDisplay.Items.AddRange(new object[] { "Items:" });
-            lstItemDisplay.Location = new Point(600, 237);
+            lstItemDisplay.Location = new Point(686, 316);
+            lstItemDisplay.Margin = new Padding(3, 4, 3, 4);
             lstItemDisplay.Name = "lstItemDisplay";
-            lstItemDisplay.Size = new Size(185, 559);
+            lstItemDisplay.Size = new Size(211, 604);
             lstItemDisplay.TabIndex = 5;
             // 
             // lblMoney
@@ -101,9 +104,9 @@
             lblMoney.AutoSize = true;
             lblMoney.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMoney.ForeColor = SystemColors.ButtonHighlight;
-            lblMoney.Location = new Point(31, 62);
+            lblMoney.Location = new Point(35, 83);
             lblMoney.Name = "lblMoney";
-            lblMoney.Size = new Size(187, 30);
+            lblMoney.Size = new Size(245, 37);
             lblMoney.TabIndex = 6;
             lblMoney.Text = "Coins: 000000000";
             // 
@@ -112,17 +115,18 @@
             label.AutoSize = true;
             label.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label.ForeColor = SystemColors.ButtonHighlight;
-            label.Location = new Point(31, 12);
+            label.Location = new Point(35, 16);
             label.Name = "label";
-            label.Size = new Size(90, 30);
+            label.Size = new Size(114, 37);
             label.TabIndex = 7;
             label.Text = "Round: ";
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(418, 767);
+            btnReset.Location = new Point(477, 848);
+            btnReset.Margin = new Padding(3, 4, 3, 4);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(125, 51);
+            btnReset.Size = new Size(143, 68);
             btnReset.TabIndex = 8;
             btnReset.Text = "Reset Game";
             btnReset.UseVisualStyleBackColor = true;
@@ -130,9 +134,10 @@
             // 
             // btnMainMenu
             // 
-            btnMainMenu.Location = new Point(225, 767);
+            btnMainMenu.Location = new Point(251, 848);
+            btnMainMenu.Margin = new Padding(3, 4, 3, 4);
             btnMainMenu.Name = "btnMainMenu";
-            btnMainMenu.Size = new Size(125, 51);
+            btnMainMenu.Size = new Size(143, 68);
             btnMainMenu.TabIndex = 9;
             btnMainMenu.Text = "Main Menu";
             btnMainMenu.UseVisualStyleBackColor = true;
@@ -143,27 +148,27 @@
             lblRound.AutoSize = true;
             lblRound.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRound.ForeColor = SystemColors.ButtonHighlight;
-            lblRound.Location = new Point(115, 12);
+            lblRound.Location = new Point(131, 16);
             lblRound.Name = "lblRound";
-            lblRound.Size = new Size(0, 30);
+            lblRound.Size = new Size(0, 37);
             lblRound.TabIndex = 10;
             // 
             // lblRoundCount
             // 
             lblRoundCount.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRoundCount.ForeColor = SystemColors.ButtonHighlight;
-            lblRoundCount.Location = new Point(121, 12);
+            lblRoundCount.Location = new Point(138, 16);
             lblRoundCount.Name = "lblRoundCount";
-            lblRoundCount.Size = new Size(100, 30);
+            lblRoundCount.Size = new Size(114, 37);
             lblRoundCount.TabIndex = 11;
             // 
             // frmRougelette
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(797, 833);
+            ClientSize = new Size(911, 934);
             Controls.Add(lblRoundCount);
             Controls.Add(lblRound);
             Controls.Add(btnMainMenu);
@@ -175,6 +180,7 @@
             Controls.Add(picWheel);
             Controls.Add(lblCharName);
             Controls.Add(picChar);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmRougelette";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)picChar).EndInit();

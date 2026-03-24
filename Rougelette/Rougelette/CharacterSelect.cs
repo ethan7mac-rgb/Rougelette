@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rougelette.Characters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace Rougelette
         private void btnCowBoySelect_Click(object sender, EventArgs e)
         {
             Cowboy cowboy = new Cowboy { Name = "Cowboy", StartingMoney = 6 };
+            
             //Make sure this is called last in any characters button click event otherwise the character wont be made first
             MainGameSwap();
         }

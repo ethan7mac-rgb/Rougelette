@@ -7,6 +7,7 @@ namespace Rougelette
         {
             InitializeComponent();
             mainMenu = main;
+
         }
 
         int RoundCount = 0;
