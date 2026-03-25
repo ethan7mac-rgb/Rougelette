@@ -12,11 +12,8 @@ namespace Rougelette.Characters
         {
             Name = "Cowboy";
             StartingMoney = 6;
+            Min = 0;
+            Max = 6;
         }
-        public override int[] WheelNums()
-        {
-            int[0] wheelNums = new int[1, 2, 3, 4, 5, 6, 0, 00];
-            return wheelNums;
-        } 
     }
 }

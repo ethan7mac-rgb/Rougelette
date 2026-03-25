@@ -14,14 +14,18 @@ namespace Rougelette
         }
 
         int RoundCount = 0;
-        int[] WheelNums = [];
         private void btnSpin_Click(object sender, EventArgs e)
         {
+            //Not working currently pls fix ethan - ethan
             RoundCount++;
             lblRoundCount.Text = RoundCount.ToString();
+            if (selectedChar is Cowboy c)
+            {
+                Random rand = new Random();
+                int rolledNum = rand.Next(c.Min, c.Max);
+                MessageBox.Show(rolledNum.ToString());
+            }
 
-            Random rand = new Random();
-            //rand.Next(WheelNums.Min, WheelNums.Max);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -47,8 +51,6 @@ namespace Rougelette
 
             lblCharName.Text = selectedChar.Name;
             lblCoins.Text = selectedChar.StartingMoney.ToString();
-            WheelNums = selectedChar.WheelNums();
-            MessageBox.Show(WheelNums.ToString());
         }
     }
 }
