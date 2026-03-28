@@ -42,7 +42,20 @@
             btnShop = new Button();
             labelSpin = new Label();
             lblSpinRes = new Label();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            label4 = new Label();
+            cboColour = new ComboBox();
+            grpNumBet = new GroupBox();
+            label3 = new Label();
+            cboNum = new ComboBox();
+            nudBet = new NumericUpDown();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picChar).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            grpNumBet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudBet).BeginInit();
             SuspendLayout();
             // 
             // picChar
@@ -124,7 +137,7 @@
             lblRoundCount.ForeColor = SystemColors.ButtonHighlight;
             lblRoundCount.Location = new Point(121, 12);
             lblRoundCount.Name = "lblRoundCount";
-            lblRoundCount.Size = new Size(100, 30);
+            lblRoundCount.Size = new Size(140, 30);
             lblRoundCount.TabIndex = 11;
             // 
             // lblCoins
@@ -133,7 +146,7 @@
             lblCoins.ForeColor = SystemColors.ButtonHighlight;
             lblCoins.Location = new Point(102, 53);
             lblCoins.Name = "lblCoins";
-            lblCoins.Size = new Size(100, 30);
+            lblCoins.Size = new Size(159, 30);
             lblCoins.TabIndex = 13;
             lblCoins.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -179,6 +192,96 @@
             lblSpinRes.Size = new Size(72, 37);
             lblSpinRes.TabIndex = 16;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(groupBox2);
+            groupBox1.Controls.Add(grpNumBet);
+            groupBox1.Controls.Add(nudBet);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(31, 152);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(425, 196);
+            groupBox1.TabIndex = 17;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(cboColour);
+            groupBox2.Location = new Point(213, 89);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(201, 92);
+            groupBox2.TabIndex = 21;
+            groupBox2.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ButtonHighlight;
+            label4.Location = new Point(6, 19);
+            label4.Name = "label4";
+            label4.Size = new Size(173, 30);
+            label4.TabIndex = 19;
+            label4.Text = "Bet On A Colour";
+            // 
+            // cboColour
+            // 
+            cboColour.FormattingEnabled = true;
+            cboColour.Location = new Point(6, 52);
+            cboColour.Name = "cboColour";
+            cboColour.Size = new Size(188, 23);
+            cboColour.TabIndex = 0;
+            // 
+            // grpNumBet
+            // 
+            grpNumBet.Controls.Add(label3);
+            grpNumBet.Controls.Add(cboNum);
+            grpNumBet.Location = new Point(6, 89);
+            grpNumBet.Name = "grpNumBet";
+            grpNumBet.Size = new Size(201, 92);
+            grpNumBet.TabIndex = 20;
+            grpNumBet.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(6, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(188, 30);
+            label3.TabIndex = 19;
+            label3.Text = "Bet On A Number";
+            // 
+            // cboNum
+            // 
+            cboNum.FormattingEnabled = true;
+            cboNum.Location = new Point(6, 52);
+            cboNum.Name = "cboNum";
+            cboNum.Size = new Size(188, 23);
+            cboNum.TabIndex = 0;
+            // 
+            // nudBet
+            // 
+            nudBet.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nudBet.Location = new Point(6, 56);
+            nudBet.Name = "nudBet";
+            nudBet.Size = new Size(156, 27);
+            nudBet.TabIndex = 19;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(6, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(156, 30);
+            label1.TabIndex = 18;
+            label1.Text = "Make Your Bet";
+            // 
             // frmRougelette
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -186,6 +289,7 @@
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(797, 700);
+            Controls.Add(groupBox1);
             Controls.Add(lblSpinRes);
             Controls.Add(labelSpin);
             Controls.Add(btnShop);
@@ -202,6 +306,13 @@
             Name = "frmRougelette";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)picChar).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            grpNumBet.ResumeLayout(false);
+            grpNumBet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudBet).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -221,5 +332,14 @@
         private Button btnShop;
         private Label labelSpin;
         private Label lblSpinRes;
+        private GroupBox groupBox1;
+        private NumericUpDown nudBet;
+        private Label label1;
+        private GroupBox groupBox2;
+        private Label label4;
+        private ComboBox cboColour;
+        private GroupBox grpNumBet;
+        private Label label3;
+        private ComboBox cboNum;
     }
 }
