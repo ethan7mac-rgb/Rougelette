@@ -34,12 +34,13 @@
             picWheel = new PictureBox();
             btnSpin = new Button();
             lstItemDisplay = new ListBox();
-            lblMoney = new Label();
             label = new Label();
             btnReset = new Button();
             btnMainMenu = new Button();
             lblRound = new Label();
             lblRoundCount = new Label();
+            lblCoins = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)picChar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picWheel).BeginInit();
             SuspendLayout();
@@ -99,17 +100,6 @@
             lstItemDisplay.Size = new Size(211, 604);
             lstItemDisplay.TabIndex = 5;
             // 
-            // lblMoney
-            // 
-            lblMoney.AutoSize = true;
-            lblMoney.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMoney.ForeColor = SystemColors.ButtonHighlight;
-            lblMoney.Location = new Point(35, 83);
-            lblMoney.Name = "lblMoney";
-            lblMoney.Size = new Size(245, 37);
-            lblMoney.TabIndex = 6;
-            lblMoney.Text = "Coins: 000000000";
-            // 
             // label
             // 
             label.AutoSize = true;
@@ -162,6 +152,27 @@
             lblRoundCount.Size = new Size(114, 37);
             lblRoundCount.TabIndex = 11;
             // 
+            // lblCoins
+            // 
+            lblCoins.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCoins.ForeColor = SystemColors.ButtonHighlight;
+            lblCoins.Location = new Point(131, 71);
+            lblCoins.Name = "lblCoins";
+            lblCoins.Size = new Size(114, 37);
+            lblCoins.TabIndex = 13;
+            lblCoins.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(35, 71);
+            label2.Name = "label2";
+            label2.Size = new Size(101, 37);
+            label2.TabIndex = 12;
+            label2.Text = "Coins: ";
+            // 
             // frmRougelette
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -169,12 +180,13 @@
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(911, 934);
+            Controls.Add(lblCoins);
+            Controls.Add(label2);
             Controls.Add(lblRoundCount);
             Controls.Add(lblRound);
             Controls.Add(btnMainMenu);
             Controls.Add(btnReset);
             Controls.Add(label);
-            Controls.Add(lblMoney);
             Controls.Add(lstItemDisplay);
             Controls.Add(btnSpin);
             Controls.Add(picWheel);
@@ -196,11 +208,12 @@
         private PictureBox picWheel;
         private Button btnSpin;
         private ListBox lstItemDisplay;
-        private Label lblMoney;
         private Label label;
         private Button btnReset;
         private Button btnMainMenu;
         private Label lblRound;
         private Label lblRoundCount;
+        private Label lblCoins;
+        private Label label2;
     }
 }

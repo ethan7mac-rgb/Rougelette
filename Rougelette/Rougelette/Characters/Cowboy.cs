@@ -8,11 +8,19 @@ namespace Rougelette.Characters
 {
     public class Cowboy : Character
     {
-
-        public override int[] WheelNums()
+        public Cowboy()
         {
-            int[] wheelNums = { 1, 2, 3, 4, 5, 6, 0, 00 };
-            return wheelNums;
-        } 
+            Name = "Cowboy";
+            StartingMoney = 6;
+            Min = 0;
+            Max = 6;
+        }
+
+        public override int Spin()
+        {
+            Random rand = new Random();
+            int rolledNum = rand.Next(Min, Max+1);
+            return rolledNum;
+        }
     }
 }
