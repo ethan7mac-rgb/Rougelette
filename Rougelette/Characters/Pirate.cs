@@ -11,9 +11,9 @@ namespace Rougelette.Characters
         public Pirate()
         {
             Name = "Pirate";
-            StartingMoney = 6;
+            StartingMoney = 12;
             Min = 0;
-            Max = 6;
+            Max = 10;
         }
 
         public override int Spin()

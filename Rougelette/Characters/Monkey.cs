@@ -10,10 +10,11 @@ namespace Rougelette.Characters
     {
         public Monkey()
         {
+            // I think it would be cool if monkey had poor money and max values but a starting item is a really good one to balancce it out
             Name = "Monkey";
-            StartingMoney = 6;
+            StartingMoney = 1;
             Min = 0;
-            Max = 6;
+            Max = 4;
         }
 
         public override int Spin()
