@@ -41,6 +41,7 @@
             lblRoundCount = new Label();
             lblCoins = new Label();
             label2 = new Label();
+            btnShop = new Button();
             ((System.ComponentModel.ISupportInitialize)picChar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picWheel).BeginInit();
             SuspendLayout();
@@ -48,10 +49,9 @@
             // picChar
             // 
             picChar.Image = (Image)resources.GetObject("picChar.Image");
-            picChar.Location = new Point(686, 16);
-            picChar.Margin = new Padding(3, 4, 3, 4);
+            picChar.Location = new Point(600, 12);
             picChar.Name = "picChar";
-            picChar.Size = new Size(211, 223);
+            picChar.Size = new Size(185, 167);
             picChar.SizeMode = PictureBoxSizeMode.StretchImage;
             picChar.TabIndex = 0;
             picChar.TabStop = false;
@@ -62,29 +62,27 @@
             lblCharName.BackColor = SystemColors.ActiveCaptionText;
             lblCharName.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCharName.ForeColor = SystemColors.ButtonHighlight;
-            lblCharName.Location = new Point(686, 261);
+            lblCharName.Location = new Point(600, 196);
             lblCharName.Name = "lblCharName";
-            lblCharName.Size = new Size(228, 46);
+            lblCharName.Size = new Size(185, 37);
             lblCharName.TabIndex = 1;
             lblCharName.Text = "lblCharName";
             // 
             // picWheel
             // 
             picWheel.Image = (Image)resources.GetObject("picWheel.Image");
-            picWheel.Location = new Point(35, 142);
-            picWheel.Margin = new Padding(3, 4, 3, 4);
+            picWheel.Location = new Point(31, 106);
             picWheel.Name = "picWheel";
-            picWheel.Size = new Size(585, 684);
+            picWheel.Size = new Size(512, 513);
             picWheel.SizeMode = PictureBoxSizeMode.StretchImage;
             picWheel.TabIndex = 3;
             picWheel.TabStop = false;
             // 
             // btnSpin
             // 
-            btnSpin.Location = new Point(35, 848);
-            btnSpin.Margin = new Padding(3, 4, 3, 4);
+            btnSpin.Location = new Point(27, 637);
             btnSpin.Name = "btnSpin";
-            btnSpin.Size = new Size(143, 68);
+            btnSpin.Size = new Size(125, 51);
             btnSpin.TabIndex = 4;
             btnSpin.Text = "Spin Da Weel";
             btnSpin.UseVisualStyleBackColor = true;
@@ -93,11 +91,11 @@
             // lstItemDisplay
             // 
             lstItemDisplay.FormattingEnabled = true;
+            lstItemDisplay.ItemHeight = 15;
             lstItemDisplay.Items.AddRange(new object[] { "Items:" });
-            lstItemDisplay.Location = new Point(686, 316);
-            lstItemDisplay.Margin = new Padding(3, 4, 3, 4);
+            lstItemDisplay.Location = new Point(600, 237);
             lstItemDisplay.Name = "lstItemDisplay";
-            lstItemDisplay.Size = new Size(211, 604);
+            lstItemDisplay.Size = new Size(185, 454);
             lstItemDisplay.TabIndex = 5;
             // 
             // label
@@ -105,18 +103,17 @@
             label.AutoSize = true;
             label.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label.ForeColor = SystemColors.ButtonHighlight;
-            label.Location = new Point(35, 16);
+            label.Location = new Point(31, 12);
             label.Name = "label";
-            label.Size = new Size(114, 37);
+            label.Size = new Size(90, 30);
             label.TabIndex = 7;
             label.Text = "Round: ";
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(477, 848);
-            btnReset.Margin = new Padding(3, 4, 3, 4);
+            btnReset.Location = new Point(289, 637);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(143, 68);
+            btnReset.Size = new Size(125, 51);
             btnReset.TabIndex = 8;
             btnReset.Text = "Reset Game";
             btnReset.UseVisualStyleBackColor = true;
@@ -124,10 +121,9 @@
             // 
             // btnMainMenu
             // 
-            btnMainMenu.Location = new Point(251, 848);
-            btnMainMenu.Margin = new Padding(3, 4, 3, 4);
+            btnMainMenu.Location = new Point(158, 637);
             btnMainMenu.Name = "btnMainMenu";
-            btnMainMenu.Size = new Size(143, 68);
+            btnMainMenu.Size = new Size(125, 51);
             btnMainMenu.TabIndex = 9;
             btnMainMenu.Text = "Main Menu";
             btnMainMenu.UseVisualStyleBackColor = true;
@@ -138,27 +134,27 @@
             lblRound.AutoSize = true;
             lblRound.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRound.ForeColor = SystemColors.ButtonHighlight;
-            lblRound.Location = new Point(131, 16);
+            lblRound.Location = new Point(115, 12);
             lblRound.Name = "lblRound";
-            lblRound.Size = new Size(0, 37);
+            lblRound.Size = new Size(0, 30);
             lblRound.TabIndex = 10;
             // 
             // lblRoundCount
             // 
             lblRoundCount.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRoundCount.ForeColor = SystemColors.ButtonHighlight;
-            lblRoundCount.Location = new Point(138, 16);
+            lblRoundCount.Location = new Point(121, 12);
             lblRoundCount.Name = "lblRoundCount";
-            lblRoundCount.Size = new Size(114, 37);
+            lblRoundCount.Size = new Size(100, 30);
             lblRoundCount.TabIndex = 11;
             // 
             // lblCoins
             // 
             lblCoins.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCoins.ForeColor = SystemColors.ButtonHighlight;
-            lblCoins.Location = new Point(131, 71);
+            lblCoins.Location = new Point(102, 53);
             lblCoins.Name = "lblCoins";
-            lblCoins.Size = new Size(114, 37);
+            lblCoins.Size = new Size(100, 30);
             lblCoins.TabIndex = 13;
             lblCoins.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -167,19 +163,30 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(35, 71);
+            label2.Location = new Point(31, 53);
             label2.Name = "label2";
-            label2.Size = new Size(101, 37);
+            label2.Size = new Size(79, 30);
             label2.TabIndex = 12;
             label2.Text = "Coins: ";
             // 
+            // btnShop
+            // 
+            btnShop.Location = new Point(420, 637);
+            btnShop.Name = "btnShop";
+            btnShop.Size = new Size(125, 51);
+            btnShop.TabIndex = 14;
+            btnShop.Text = "Shop";
+            btnShop.UseVisualStyleBackColor = true;
+            btnShop.Click += btnShop_Click;
+            // 
             // frmRougelette
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(911, 934);
+            ClientSize = new Size(797, 700);
+            Controls.Add(btnShop);
             Controls.Add(lblCoins);
             Controls.Add(label2);
             Controls.Add(lblRoundCount);
@@ -192,7 +199,6 @@
             Controls.Add(picWheel);
             Controls.Add(lblCharName);
             Controls.Add(picChar);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmRougelette";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)picChar).EndInit();
@@ -215,5 +221,6 @@
         private Label lblRoundCount;
         private Label lblCoins;
         private Label label2;
+        private Button btnShop;
     }
 }

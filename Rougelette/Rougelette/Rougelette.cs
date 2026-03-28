@@ -5,12 +5,13 @@ namespace Rougelette
     public partial class frmRougelette : Form
     {
         private frmMainMenu mainMenu;
-
+        private frmItemShop shop;
         private Character selectedChar;
-        public frmRougelette(frmMainMenu main)
+        public frmRougelette(frmMainMenu main, frmItemShop itemShop)
         {
             InitializeComponent();
             mainMenu = main;
+            shop = itemShop;
         }
 
         int RoundCount = 0;
@@ -23,7 +24,7 @@ namespace Rougelette
             {
                 MessageBox.Show(c.Spin().ToString());
             }
-            
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -49,6 +50,11 @@ namespace Rougelette
 
             lblCharName.Text = selectedChar.Name;
             lblCoins.Text = selectedChar.StartingMoney.ToString();
+        }
+
+        private void btnShop_Click(object sender, EventArgs e)
+        {
+            shop.ShowDialog();
         }
     }
 }

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "4hhL9jcSe68=",
+=======
+  "dgSpecHash": "EyrsFABJqOs=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\ethan\\OneDrive - NBCC\\Desktop\\IT\\Winter\\OOP\\Rougelette-main\\Rougelette-main - Copy\\Rougelette\\Rougelette\\Rougelette.csproj",
   "expectedPackageFiles": [],
