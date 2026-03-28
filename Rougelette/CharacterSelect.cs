@@ -52,7 +52,7 @@ namespace Rougelette
             Monkey monkey = new Monkey();
             roguelette.SetChar(monkey);
             this.DialogResult = DialogResult.OK;
-
+    
             MainGameSwap();
         }
     }
