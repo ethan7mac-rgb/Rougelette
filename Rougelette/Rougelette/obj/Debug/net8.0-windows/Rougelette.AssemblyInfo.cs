@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rougelette")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e0e1f0321ea8fb9d088780db08b961b5f528d76")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("Rougelette")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rougelette")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
