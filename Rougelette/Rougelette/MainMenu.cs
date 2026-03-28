@@ -15,12 +15,15 @@ namespace Rougelette
         //DONT TOUCH THIS IDIOTS
         private frmCharacterSelect charSelect;
         private frmRougelette rouge;
+        private frmItemShop shop;
         public frmMainMenu()
         {
             //AND THIS
             InitializeComponent();
-            rouge = new frmRougelette(this);
+            shop = new frmItemShop();
+            rouge = new frmRougelette(this, shop);
             charSelect = new frmCharacterSelect(rouge);
+            
             charSelect.Hide();
             rouge.Hide();
         }

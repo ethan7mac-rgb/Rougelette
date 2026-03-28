@@ -4,6 +4,9 @@
     <Compile Update="CharacterSelect.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ItemShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
