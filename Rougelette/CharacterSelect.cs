@@ -35,5 +35,25 @@ namespace Rougelette
             roguelette.Show();
             this.Hide();
         }
+
+        private void btnPirateSelect_Click(object sender, EventArgs e)
+        {
+            //Creates a pirate obj and sends it to the main game form
+            Pirate pirate = new Pirate();
+            roguelette.SetChar(pirate);
+            this.DialogResult = DialogResult.OK;
+
+            MainGameSwap();
+        }
+
+        private void btnMonkeySelect_Click(object sender, EventArgs e)
+        {
+            //Creates a monkey obj and sends it to the main game form
+            Monkey monkey = new Monkey();
+            roguelette.SetChar(monkey);
+            this.DialogResult = DialogResult.OK;
+
+            MainGameSwap();
+        }
     }
 }
