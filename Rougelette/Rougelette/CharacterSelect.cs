@@ -22,8 +22,11 @@ namespace Rougelette
         }
         private void btnCowBoySelect_Click(object sender, EventArgs e)
         {
-            Cowboy cowboy = new Cowboy { Name = "Cowboy", StartingMoney = 6 };
-            
+            //Creates a cowboy obj and sends it to the main game form
+            //Copy this for any new character
+            Cowboy cowboy = new Cowboy();
+            roguelette.SetChar(cowboy);
+            this.DialogResult = DialogResult.OK;
             //Make sure this is called last in any characters button click event otherwise the character wont be made first
             MainGameSwap();
         }

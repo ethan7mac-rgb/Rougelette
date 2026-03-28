@@ -30,5 +30,12 @@ namespace Rougelette
             charSelect.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            charSelect.Close();
+            rouge.Close();
+            this.Close();
+        }
     }
 }
