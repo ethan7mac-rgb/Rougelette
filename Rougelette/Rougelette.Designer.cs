@@ -231,8 +231,11 @@
             // 
             // cboColour
             // 
+            cboColour.DropDownStyle = ComboBoxStyle.DropDownList;
             cboColour.FormattingEnabled = true;
+            cboColour.Items.AddRange(new object[] { "None" });
             cboColour.Location = new Point(6, 52);
+            cboColour.MaxDropDownItems = 100;
             cboColour.Name = "cboColour";
             cboColour.Size = new Size(188, 23);
             cboColour.TabIndex = 0;
@@ -260,8 +263,11 @@
             // 
             // cboNum
             // 
+            cboNum.DropDownStyle = ComboBoxStyle.DropDownList;
             cboNum.FormattingEnabled = true;
+            cboNum.Items.AddRange(new object[] { "None" });
             cboNum.Location = new Point(6, 52);
+            cboNum.MaxDropDownItems = 100;
             cboNum.Name = "cboNum";
             cboNum.Size = new Size(188, 23);
             cboNum.TabIndex = 0;

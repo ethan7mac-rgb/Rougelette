@@ -18,6 +18,7 @@ namespace Rougelette
         int RoundCount = 0;
         private void btnSpin_Click(object sender, EventArgs e)
         {
+            int bet = (int)nudBet.Value;
             int spinRes;
             if (nudBet.Value > 0)
             {
@@ -26,7 +27,23 @@ namespace Rougelette
                     MessageBox.Show("You cant bet money you dont have");
                     return;
                 }
-                if(cboColour.SelectedIndex == -1 && cboNum.SelectedIndex == -1)
+                if (cboNum.SelectedIndex > 0 && cboColour.SelectedIndex > 0)
+                {
+                    if (gold - (bet * 2) < 0)
+                    {
+                        MessageBox.Show("Nice try I thought of that exploit");
+                        return;
+                    }
+                    else
+                    {
+                        gold = gold - bet;
+                    }
+                }
+                else if(gold - bet >= 0)
+                {
+                    gold = gold - bet;
+                }
+                if (cboColour.SelectedIndex <= 0 && cboNum.SelectedIndex <= 0)
                 {
                     MessageBox.Show("Choose something to bet on");
                     return;
@@ -50,7 +67,8 @@ namespace Rougelette
                         spinRes = m.Spin();
                         showSpin(spinRes);
                     }
-                    Bet();
+                    
+                    Bet(bet);
                     lblCoins.Text = gold.ToString();
                     LoseCheck();
                 }
@@ -76,6 +94,13 @@ namespace Rougelette
 
         private bool LoseCheck()
         {
+            if (RoundCount % 4 == 0 && RoundCount != 0)
+            {
+                fee++;
+            }
+            lblFee.Text = fee.ToString();
+            gold = gold - fee;
+            lblCoins.Text = gold.ToString();
             if (gold <= 0)
             {
                 lblCoins.Text = "0";
@@ -102,6 +127,9 @@ namespace Rougelette
             lblSpinRes.Text = "";
             cboColour.Items.Clear();
             cboNum.Items.Clear();
+            cboColour.Items.Add("None");
+            cboNum.Items.Add("None");
+            nudBet.Value = 0;
         }
 
         private void btnMainMenu_Click(object sender, EventArgs e)
@@ -112,6 +140,9 @@ namespace Rougelette
         }
         public void SetChar(Character character)
         {
+            Reset();
+            lblFee.Text = fee.ToString();
+            lblRoundCount.Text = RoundCount.ToString();
             int blackCount = 0, redCount = 0, greenCount = 0;
             if (character is Character c)
                 selectedChar = c;
@@ -151,29 +182,17 @@ namespace Rougelette
         }
 
 
-        private void Bet()
+        private void Bet(int bet)
         {
-            //Not working if user slects both also need to add a way to not bet on one and bet on another after betting on one first
-            int bet = (int)nudBet.Value;
-            if (RoundCount % 4 == 0 && RoundCount != 0)
-            {
-                fee++;
-            }
-            lblFee.Text = fee.ToString();
-            gold = gold - fee;
-            int winnings = 0;
-            if(cboNum.SelectedIndex != -1)
+            int winnings = 0; 
+            if(cboNum.SelectedIndex > 0)
             {
                 if(cboNum.SelectedItem.ToString().ToLower() == lblSpinRes.Text.ToLower())
                 {
                     winnings += bet * 3;
                 }
-                else
-                {
-                     winnings -= bet; 
-                } 
             }
-            if(cboColour.SelectedIndex != -1)
+            if(cboColour.SelectedIndex > 0)
             {
                 string colourText = cboColour.SelectedItem.ToString();
                 string colour = colourText.Split(' ')[0];
@@ -181,10 +200,7 @@ namespace Rougelette
                 {
                     winnings+=(bet * 2);
                 }
-                else
-                {
-                    winnings -= bet;
-                }
+
             }
             gold = gold + winnings;
             lblCoins.Text = gold.ToString();
