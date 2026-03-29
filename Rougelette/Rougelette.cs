@@ -173,7 +173,6 @@ namespace Rougelette
                      winnings -= bet; 
                 } 
             }
-            else 
             if(cboColour.SelectedIndex != -1)
             {
                 string colourText = cboColour.SelectedItem.ToString();
