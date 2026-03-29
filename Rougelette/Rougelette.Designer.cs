@@ -51,6 +51,9 @@
             cboNum = new ComboBox();
             nudBet = new NumericUpDown();
             label1 = new Label();
+            lblSpinResColour = new Label();
+            lblFee = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)picChar).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -282,6 +285,36 @@
             label1.TabIndex = 18;
             label1.Text = "Make Your Bet";
             // 
+            // lblSpinResColour
+            // 
+            lblSpinResColour.BackColor = SystemColors.ActiveCaptionText;
+            lblSpinResColour.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSpinResColour.ForeColor = SystemColors.ButtonHighlight;
+            lblSpinResColour.Location = new Point(230, 96);
+            lblSpinResColour.Name = "lblSpinResColour";
+            lblSpinResColour.Size = new Size(92, 37);
+            lblSpinResColour.TabIndex = 18;
+            // 
+            // lblFee
+            // 
+            lblFee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFee.ForeColor = SystemColors.ButtonHighlight;
+            lblFee.Location = new Point(510, 9);
+            lblFee.Name = "lblFee";
+            lblFee.Size = new Size(73, 30);
+            lblFee.TabIndex = 20;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(463, 9);
+            label6.Name = "label6";
+            label6.Size = new Size(52, 30);
+            label6.TabIndex = 19;
+            label6.Text = "Fee:";
+            // 
             // frmRougelette
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -289,6 +322,9 @@
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(797, 700);
+            Controls.Add(lblFee);
+            Controls.Add(label6);
+            Controls.Add(lblSpinResColour);
             Controls.Add(groupBox1);
             Controls.Add(lblSpinRes);
             Controls.Add(labelSpin);
@@ -341,5 +377,8 @@
         private GroupBox grpNumBet;
         private Label label3;
         private ComboBox cboNum;
+        private Label lblSpinResColour;
+        private Label lblFee;
+        private Label label6;
     }
 }
