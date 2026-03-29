@@ -18,67 +18,73 @@ namespace Rougelette
         int RoundCount = 0;
         private void btnSpin_Click(object sender, EventArgs e)
         {
-            int bet = (int)nudBet.Value;
-            int spinRes;
-            if (nudBet.Value > 0)
+            try
             {
-                if (nudBet.Value > gold)
+                int bet = (int)nudBet.Value;
+                int spinRes;
+                if (nudBet.Value > 0)
                 {
-                    MessageBox.Show("You cant bet money you dont have");
-                    return;
-                }
-                if (cboNum.SelectedIndex > 0 && cboColour.SelectedIndex > 0)
-                {
-                    if (gold - (bet * 2) < 0)
+                    if (nudBet.Value > gold)
                     {
-                        MessageBox.Show("Nice try I thought of that exploit");
+                        MessageBox.Show("You cant bet money you dont have");
+                        return;
+                    }
+                    if (cboNum.SelectedIndex > 0 && cboColour.SelectedIndex > 0)
+                    {
+                        if (gold - (bet * 2) < 0)
+                        {
+                            MessageBox.Show("Nice try I thought of that exploit");
+                            return;
+                        }
+                        else
+                        {
+                            gold = gold - bet;
+                        }
+                    }
+                    else if (gold - bet >= 0)
+                    {
+                        gold = gold - bet;
+                    }
+                    if (cboColour.SelectedIndex <= 0 && cboNum.SelectedIndex <= 0)
+                    {
+                        MessageBox.Show("Choose something to bet on");
                         return;
                     }
                     else
                     {
-                        gold = gold - bet;
+                        RoundCount++;
+                        lblRoundCount.Text = RoundCount.ToString();
+                        if (selectedChar is Cowboy c)
+                        {
+                            spinRes = c.Spin();
+                            showSpin(spinRes);
+                        }
+                        if (selectedChar is Pirate p)
+                        {
+                            spinRes = p.Spin();
+                            showSpin(spinRes);
+                        }
+                        if (selectedChar is Monkey m)
+                        {
+                            spinRes = m.Spin();
+                            showSpin(spinRes);
+                        }
+
+                        Bet(bet);
+                        lblCoins.Text = gold.ToString();
+                        LoseCheck();
                     }
-                }
-                else if(gold - bet >= 0)
-                {
-                    gold = gold - bet;
-                }
-                if (cboColour.SelectedIndex <= 0 && cboNum.SelectedIndex <= 0)
-                {
-                    MessageBox.Show("Choose something to bet on");
-                    return;
                 }
                 else
                 {
-                    RoundCount++;
-                    lblRoundCount.Text = RoundCount.ToString();
-                    if (selectedChar is Cowboy c)
-                    {
-                        spinRes = c.Spin();
-                        showSpin(spinRes);
-                    }
-                    if (selectedChar is Pirate p)
-                    {
-                        spinRes = p.Spin();
-                        showSpin(spinRes);
-                    }
-                    if (selectedChar is Monkey m)
-                    {
-                        spinRes = m.Spin();
-                        showSpin(spinRes);
-                    }
-                    
-                    Bet(bet);
-                    lblCoins.Text = gold.ToString();
-                    LoseCheck();
+                    MessageBox.Show("Please place a bet higher than 0");
+                    return;
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Please place a bet higher than 0");
-                return;
+                MessageBox.Show($"Error With Betting: {ex}");
             }
-            
         }
 
         private void showSpin(int spinNum)
