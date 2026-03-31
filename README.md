@@ -2,7 +2,7 @@
 A very cool game about gambling
 
 
-TODO
-Login Screen
-More Items and Characters
-Figure out how the hell we incoperate a interface
+TODO FOR JEREMY AND ANDERSON (Mark which one of you did this)
+
+Change the selectedCharacters gold in rougelette form when item is purchased
+Add the item to the lstItems that they buy in the shop form
