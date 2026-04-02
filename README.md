@@ -2,7 +2,7 @@
 A very cool game about gambling
 
 
-TODO FOR JEREMY AND ANDERSON (Mark which one of you did this)
+TODO FOR JEREMY AND ANDERSON (Mark which one of you did this)(Finish by monday)
 
 
 Change the selectedCharacters gold in rougelette form when item is purchased
