@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Rougelette
 {
@@ -16,6 +17,7 @@ namespace Rougelette
         private frmCharacterSelect charSelect;
         private frmRougelette rouge;
         private frmItemShop shop;
+        private record SaveData(string Character, int Gold, int Fee, int RoundCount);
         public frmMainMenu()
         {
             //AND THIS
@@ -27,11 +29,20 @@ namespace Rougelette
             charSelect.Hide();
             rouge.Hide();
         }
-
+        public string Username => txtUser.Text.Trim();
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            charSelect.Show();
-            this.Hide();
+            //grab the username and ensure it doesnt contain any empty spaces
+            string userName  = txtUser.Text.Trim();
+            if(userName == "")
+            {
+                MessageBox.Show("Enter a username");
+            }
+            else
+            {
+                charSelect.Show();
+                this.Hide();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

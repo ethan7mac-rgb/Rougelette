@@ -32,26 +32,26 @@
             picTitle = new PictureBox();
             btnNewGame = new Button();
             button1 = new Button();
+            txtUser = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picTitle).BeginInit();
             SuspendLayout();
             // 
             // picTitle
             // 
             picTitle.Image = (Image)resources.GetObject("picTitle.Image");
-            picTitle.Location = new Point(86, 44);
-            picTitle.Margin = new Padding(3, 4, 3, 4);
+            picTitle.Location = new Point(75, 33);
             picTitle.Name = "picTitle";
-            picTitle.Size = new Size(722, 97);
+            picTitle.Size = new Size(632, 73);
             picTitle.SizeMode = PictureBoxSizeMode.StretchImage;
             picTitle.TabIndex = 0;
             picTitle.TabStop = false;
             // 
             // btnNewGame
             // 
-            btnNewGame.Location = new Point(378, 248);
-            btnNewGame.Margin = new Padding(3, 4, 3, 4);
+            btnNewGame.Location = new Point(75, 332);
             btnNewGame.Name = "btnNewGame";
-            btnNewGame.Size = new Size(137, 52);
+            btnNewGame.Size = new Size(120, 39);
             btnNewGame.TabIndex = 1;
             btnNewGame.Text = "New Game";
             btnNewGame.UseVisualStyleBackColor = true;
@@ -59,30 +59,49 @@
             // 
             // button1
             // 
-            button1.Location = new Point(378, 324);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(587, 332);
             button1.Name = "button1";
-            button1.Size = new Size(137, 52);
+            button1.Size = new Size(120, 39);
             button1.TabIndex = 2;
             button1.Text = "Exit";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // txtUser
+            // 
+            txtUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUser.Location = new Point(335, 209);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(120, 33);
+            txtUser.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(335, 176);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 30);
+            label1.TabIndex = 4;
+            label1.Text = "Username:";
+            // 
             // frmMainMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(907, 600);
+            ClientSize = new Size(794, 450);
+            Controls.Add(label1);
+            Controls.Add(txtUser);
             Controls.Add(button1);
             Controls.Add(btnNewGame);
             Controls.Add(picTitle);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMainMenu";
             Text = "Main Menu";
             ((System.ComponentModel.ISupportInitialize)picTitle).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -90,5 +109,7 @@
         private PictureBox picTitle;
         private Button btnNewGame;
         private Button button1;
+        private TextBox txtUser;
+        private Label label1;
     }
 }

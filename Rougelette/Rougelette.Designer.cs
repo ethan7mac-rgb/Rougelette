@@ -54,6 +54,9 @@
             lblSpinResColour = new Label();
             lblFee = new Label();
             label6 = new Label();
+            lblHS = new Label();
+            label7 = new Label();
+            btnSaveScore = new Button();
             ((System.ComponentModel.ISupportInitialize)picChar).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -102,6 +105,7 @@
             lstItemDisplay.Name = "lstItemDisplay";
             lstItemDisplay.Size = new Size(185, 454);
             lstItemDisplay.TabIndex = 5;
+            lstItemDisplay.SelectedIndexChanged += lstItemDisplay_SelectedIndexChanged;
             // 
             // label
             // 
@@ -305,7 +309,7 @@
             // 
             lblFee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblFee.ForeColor = SystemColors.ButtonHighlight;
-            lblFee.Location = new Point(510, 9);
+            lblFee.Location = new Point(510, 152);
             lblFee.Name = "lblFee";
             lblFee.Size = new Size(73, 30);
             lblFee.TabIndex = 20;
@@ -315,11 +319,41 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(463, 9);
+            label6.Location = new Point(462, 152);
             label6.Name = "label6";
             label6.Size = new Size(52, 30);
             label6.TabIndex = 19;
             label6.Text = "Fee:";
+            // 
+            // lblHS
+            // 
+            lblHS.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHS.ForeColor = SystemColors.ButtonHighlight;
+            lblHS.Location = new Point(508, 9);
+            lblHS.Name = "lblHS";
+            lblHS.Size = new Size(73, 30);
+            lblHS.TabIndex = 22;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ButtonHighlight;
+            label7.Location = new Point(393, 9);
+            label7.Name = "label7";
+            label7.Size = new Size(121, 30);
+            label7.TabIndex = 21;
+            label7.Text = "HighScore:";
+            // 
+            // btnSaveScore
+            // 
+            btnSaveScore.Location = new Point(456, 47);
+            btnSaveScore.Name = "btnSaveScore";
+            btnSaveScore.Size = new Size(125, 51);
+            btnSaveScore.TabIndex = 23;
+            btnSaveScore.Text = "Save Score";
+            btnSaveScore.UseVisualStyleBackColor = true;
+            btnSaveScore.Click += btnSaveScore_Click;
             // 
             // frmRougelette
             // 
@@ -328,6 +362,9 @@
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(797, 700);
+            Controls.Add(btnSaveScore);
+            Controls.Add(lblHS);
+            Controls.Add(label7);
             Controls.Add(lblFee);
             Controls.Add(label6);
             Controls.Add(lblSpinResColour);
@@ -386,5 +423,8 @@
         private Label lblSpinResColour;
         private Label lblFee;
         private Label label6;
+        private Label lblHS;
+        private Label label7;
+        private Button btnSaveScore;
     }
 }

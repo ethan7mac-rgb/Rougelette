@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rougelette.Items;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace Rougelette
         private void btnRouge_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnBigSword_Click(object sender, EventArgs e)
+        {
+            ABigSword sword = new ABigSword();
         }
     }
 }
