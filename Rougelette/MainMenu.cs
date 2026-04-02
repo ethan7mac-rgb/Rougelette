@@ -40,8 +40,6 @@ namespace Rougelette
             }
             else
             {
-                string path = Application.StartupPath + "users.txt";
-                MessageBox.Show(path);
                 charSelect.Show();
                 this.Hide();
             }

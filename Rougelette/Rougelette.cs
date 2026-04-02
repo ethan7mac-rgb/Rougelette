@@ -1,8 +1,9 @@
+using Microsoft.VisualBasic.ApplicationServices;
+using Rougelette.Characters;
+using Rougelette.Items;
 using System;
 using System.IO;
 using System.Linq;
-using Rougelette.Characters;
-using Rougelette.Items;
 
 namespace Rougelette
 {
@@ -185,7 +186,7 @@ namespace Rougelette
             cboColour.Items.Add($"Green ({greenCount})");
             cboColour.Items.Add($"Red ({redCount})");
             cboColour.Items.Add($"Black ({blackCount})");
-
+            HighScoreSet();
         }
 
         private void btnShop_Click(object sender, EventArgs e)
@@ -247,32 +248,75 @@ namespace Rougelette
         {
             try
             {
-                // Get username from main menu
+                List<string> users = UserCheck();
                 string user = mainMenu.Username;
                 string path = Path.Combine(Application.StartupPath, "users.txt");
+
+                bool found = false;
+                for (int i = 0; i < users.Count; i++)
+                {
+                    string[] pieces = users[i].Split(" : ");
+                    if (pieces[0].ToString().ToLower() == user.ToLower())
+                    {
+                        users[i] = $"{user} : {lblHS.Text}";
+                        File.WriteAllLines(path, users);
+                        found = true;
+                        return;
+                    }
+                }
+
+                if (!found)
+                {
+                    using StreamWriter writer = new StreamWriter(path, true);
+                    writer.WriteLine($"{user} : {lblHS.Text}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error Saving Highscore {ex.Message}");
+            }
+        }
+
+        private List<string> UserCheck()
+        { 
+            List<string> users = new List<string>();
+            try
+            {
+                string user, path;
+                user = mainMenu.Username;
+                path = Path.Combine(Application.StartupPath, "users.txt");
                 using StreamReader reader = new StreamReader(path);
-                List<string> users = new List<string>();
+               
                 while (reader.EndOfStream == false)
                     users.Add(reader.ReadLine());
-                
-                foreach(string u in users)
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error With Getting All Users {ex.Message}");
+            }
+
+            return users;
+        }
+
+        private void HighScoreSet()
+        {
+            try
+            {
+                List<string> users = UserCheck();
+                string user = mainMenu.Username;
+                string path = Path.Combine(Application.StartupPath, "users.txt");
+                for (int i = 0; i < users.Count; i++)
                 {
-                    lstItemDisplay.Items.Add(u);
-                    var pieces = u.Split(" : ");
+                    string[] pieces = users[i].Split(" : ");
                     if (pieces[0].ToString().ToLower() == user.ToLower())
                     {
                         lblHS.Text = pieces[1].ToString();
-                    }
-                    else
-                    {
-                        using StreamWriter writer = new StreamWriter(path, true);
-                        writer.WriteLine($"{user} : {lblHS.Text}");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving highscore: {ex.Message}");
+                MessageBox.Show($"Error Saving Highscore {ex.Message}");
             }
         }
     }
