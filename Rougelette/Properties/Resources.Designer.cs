@@ -103,6 +103,16 @@ namespace Rougelette.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap regent_forge {
+            get {
+                object obj = ResourceManager.GetObject("regent_forge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tempCowboy {
             get {
                 object obj = ResourceManager.GetObject("tempCowboy", resourceCulture);

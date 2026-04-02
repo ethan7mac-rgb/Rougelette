@@ -12,6 +12,8 @@ namespace Rougelette.Items
     {
         public int Price { get; set; }
 
+        public int Durability { get; set; }
+
         public virtual int Buy(int gold)
         {
             int finalGold = gold - Price;

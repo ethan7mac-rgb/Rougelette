@@ -1,4 +1,8 @@
+using System;
+using System.IO;
+using System.Linq;
 using Rougelette.Characters;
+using Rougelette.Items;
 
 namespace Rougelette
 {
@@ -59,12 +63,12 @@ namespace Rougelette
                             spinRes = c.Spin();
                             showSpin(spinRes);
                         }
-                        if (selectedChar is Pirate p)
+                        else if (selectedChar is Pirate p)
                         {
                             spinRes = p.Spin();
                             showSpin(spinRes);
                         }
-                        if (selectedChar is Monkey m)
+                        else if (selectedChar is Monkey m)
                         {
                             spinRes = m.Spin();
                             showSpin(spinRes);
@@ -73,6 +77,7 @@ namespace Rougelette
                         Bet(bet);
                         lblCoins.Text = gold.ToString();
                         LoseCheck();
+                        HighScoreCheck();
                     }
                 }
                 else
@@ -81,7 +86,7 @@ namespace Rougelette
                     return;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Error With Betting: {ex}");
             }
@@ -115,10 +120,10 @@ namespace Rougelette
                 Reset();
                 this.Hide();
                 mainMenu.Show();
-                return true; 
+                return true;
             }
             else
-            {    
+            {
                 return false;
             }
 
@@ -147,6 +152,7 @@ namespace Rougelette
         public void SetChar(Character character)
         {
             Reset();
+            HighScoreCheck();
             lblFee.Text = fee.ToString();
             lblRoundCount.Text = RoundCount.ToString();
             int blackCount = 0, redCount = 0, greenCount = 0;
@@ -163,11 +169,11 @@ namespace Rougelette
             foreach (int num in numsArr)
             {
                 cboNum.Items.Add(num);
-                if(num == 0)
+                if (num == 0)
                 {
                     greenCount++;
                 }
-                else if(num % 2 == 0)
+                else if (num % 2 == 0)
                 {
                     redCount++;
                 }
@@ -190,26 +196,84 @@ namespace Rougelette
 
         private void Bet(int bet)
         {
-            int winnings = 0; 
-            if(cboNum.SelectedIndex > 0)
+            int winnings = 0;
+            if (cboNum.SelectedIndex > 0)
             {
-                if(cboNum.SelectedItem.ToString().ToLower() == lblSpinRes.Text.ToLower())
+                if (cboNum.SelectedItem.ToString().ToLower() == lblSpinRes.Text.ToLower())
                 {
                     winnings += bet * 3;
                 }
             }
-            if(cboColour.SelectedIndex > 0)
+            if (cboColour.SelectedIndex > 0)
             {
                 string colourText = cboColour.SelectedItem.ToString();
                 string colour = colourText.Split(' ')[0];
-                if(colour.ToLower() == lblSpinResColour.Text.ToLower())
+                if (colour.ToLower() == lblSpinResColour.Text.ToLower())
                 {
-                    winnings+=(bet * 2);
+                    winnings += (bet * 2);
                 }
 
             }
             gold = gold + winnings;
             lblCoins.Text = gold.ToString();
+        }
+
+        private void lstItemDisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Item item;
+            item = (Item)lstItemDisplay.SelectedItem;
+            if (item is ABigSword s)
+            {
+                if (s.IWait() == true)
+                {
+                    MessageBox.Show("Bruh");
+                }
+                if (s.Durability <= 0)
+                {
+                    lstItemDisplay.Items.RemoveAt(lstItemDisplay.SelectedIndex);
+                }
+            }
+        }
+
+        private void HighScoreCheck()
+        {
+            string highScore = "0";
+            if (Convert.ToInt32(highScore) < RoundCount)
+                highScore = RoundCount.ToString();
+            lblHS.Text = highScore;
+        }
+
+        private void btnSaveScore_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Get username from main menu
+                string user = mainMenu.Username;
+                string path = Path.Combine(Application.StartupPath, "users.txt");
+                using StreamReader reader = new StreamReader(path);
+                List<string> users = new List<string>();
+                while (reader.EndOfStream == false)
+                    users.Add(reader.ReadLine());
+                
+                foreach(string u in users)
+                {
+                    lstItemDisplay.Items.Add(u);
+                    var pieces = u.Split(" : ");
+                    if (pieces[0].ToString().ToLower() == user.ToLower())
+                    {
+                        lblHS.Text = pieces[1].ToString();
+                    }
+                    else
+                    {
+                        using StreamWriter writer = new StreamWriter(path, true);
+                        writer.WriteLine($"{user} : {lblHS.Text}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving highscore: {ex.Message}");
+            }
         }
     }
 }

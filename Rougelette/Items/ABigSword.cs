@@ -10,16 +10,19 @@ namespace Rougelette.Items
     {
         public ABigSword()
         {
-            Price = 1;
+            Price = 2;
+            Durability = 5;
         }
-        public void IWait()
+        public bool IWait()
         {
             Random rand = new Random();
             int waiting = rand.Next(0, 1000);
-            if(waiting == 1000)
+            if (waiting == 1000)
             {
-
+                return true;
             }
+            else
+                return false;
         }
     }
 }
