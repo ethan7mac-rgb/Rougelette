@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rougelette.Characters
 {
-    public class Monkey : Character
+    public sealed class Monkey : Character
     {
         public Monkey()
         {

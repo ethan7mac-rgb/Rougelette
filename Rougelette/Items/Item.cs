@@ -14,17 +14,16 @@ namespace Rougelette.Items
 
         public int Durability { get; set; }
 
-        public virtual int Buy(int gold)
+        //Ex of implementation int finalGold = gold - selectedItem;
+        public static int operator -(int gold, Item item)
         {
-            int finalGold = gold - Price;
-            if(finalGold < 0)
+            int finalGold = gold - item.Price;
+            if (finalGold < 0)
             {
-                return finalGold = gold;
+                MessageBox.Show("Not enough to buy this gold!");
+                return gold;
             }
-            else
-            {
-                return finalGold;
-            }
+            return finalGold;
         }
     }
 }
