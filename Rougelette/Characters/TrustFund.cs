@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rougelette.Characters
 {
-    public class TrustFund : Character
+    public sealed class TrustFund : Character
     {
         public TrustFund()
         {
