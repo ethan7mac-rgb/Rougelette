@@ -12,15 +12,14 @@ namespace Rougelette
         private frmMainMenu mainMenu;
         private frmItemShop shop;
         private Character selectedChar;
-        public frmRougelette(frmMainMenu main, frmItemShop itemShop)
+        public frmRougelette(frmMainMenu main)
         {
             InitializeComponent();
             mainMenu = main;
-            shop = itemShop;
         }
-        public int gold;
+        private int gold;
         private int fee = 0;
-        int RoundCount = 0;
+        private int RoundCount = 0;
         private void btnSpin_Click(object sender, EventArgs e)
         {
             try
@@ -191,10 +190,22 @@ namespace Rougelette
 
         private void btnShop_Click(object sender, EventArgs e)
         {
-            shop.ShowDialog();
+            try
+            {
+                frmItemShop shop = new frmItemShop(gold);
+                shop.ShowDialog();
+                gold = shop.gold;
+                lblCoins.Text = gold.ToString();
+                foreach (Item i in shop.ShoppingList)
+                    lstItemDisplay.Items.Add(i.Name);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening the shop {ex.Message}");
+            }
         }
 
-
+        
         private void Bet(int bet)
         {
             int winnings = 0;
@@ -221,6 +232,7 @@ namespace Rougelette
 
         private void lstItemDisplay_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //testing stuff not final feel free to change
             Item item;
             item = (Item)lstItemDisplay.SelectedItem;
             if (item is ABigSword s)

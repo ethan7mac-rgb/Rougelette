@@ -12,6 +12,7 @@ namespace Rougelette.Items
         {
             Price = 2;
             Durability = 5;
+            Name = "A Giant Sword!";
         }
         public bool IWait()
         {
