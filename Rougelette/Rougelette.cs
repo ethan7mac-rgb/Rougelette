@@ -4,13 +4,14 @@ using Rougelette.Items;
 using System;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace Rougelette
 {
     public partial class frmRougelette : Form
     {
         private frmMainMenu mainMenu;
-        private frmItemShop shop;
+        private List<Item> items = new List<Item>();
         private Character selectedChar;
         public frmRougelette(frmMainMenu main)
         {
@@ -20,6 +21,7 @@ namespace Rougelette
         private int gold;
         private int fee = 0;
         private int RoundCount = 0;
+        //Gross amount of ifs checking for various gold states
         private void btnSpin_Click(object sender, EventArgs e)
         {
             try
@@ -58,6 +60,7 @@ namespace Rougelette
                     {
                         RoundCount++;
                         lblRoundCount.Text = RoundCount.ToString();
+                        //Check which char is playing
                         if (selectedChar is Cowboy c)
                         {
                             spinRes = c.Spin();
@@ -197,7 +200,8 @@ namespace Rougelette
                 gold = shop.gold;
                 lblCoins.Text = gold.ToString();
                 foreach (Item i in shop.ShoppingList)
-                    lstItemDisplay.Items.Add(i.Name);
+                    items.Add(i);
+                RepopLst();
             }
             catch (Exception ex)
             {
@@ -232,22 +236,30 @@ namespace Rougelette
 
         private void lstItemDisplay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //testing stuff not final feel free to change
-            Item item;
-            item = (Item)lstItemDisplay.SelectedItem;
-            if (item is ABigSword s)
+            var selItem = lstItemDisplay.SelectedItem;
+            if (selItem is ABigSword s)
             {
-                if (s.IWait() == true)
-                {
-                    MessageBox.Show("Bruh");
-                }
-                if (s.Durability <= 0)
-                {
-                    lstItemDisplay.Items.RemoveAt(lstItemDisplay.SelectedIndex);
-                }
+                gold += s.IWait();
+                if (DurCheck(s.Durability))
+                    items.Remove(s);
             }
+            RepopLst();
         }
 
+        private void RepopLst()
+        {
+            lstItemDisplay.Items.Clear();
+            foreach (Item i in items)
+                lstItemDisplay.Items.Add(i);
+        }
+
+        private bool DurCheck(int dur)
+        {
+            if (dur <= 0)
+                return true;
+            else
+                return false;
+        }
         private void HighScoreCheck()
         {
             string highScore = "0";
