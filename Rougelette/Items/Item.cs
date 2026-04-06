@@ -10,11 +10,12 @@ namespace Rougelette.Items
 {
     public abstract class Item
     {
+        public string Name { get; set; }
         public int Price { get; set; }
 
         public int Durability { get; set; }
 
-        //Ex of implementation int finalGold = gold - selectedItem;
+        //Ex of implementation int gold = gold - selectedItem;
         public static int operator -(int gold, Item item)
         {
             int finalGold = gold - item.Price;
@@ -24,6 +25,10 @@ namespace Rougelette.Items
                 return gold;
             }
             return finalGold;
+        }
+        public override string ToString()
+        {
+            return $"{Name} Durability: {Durability}";
         }
     }
 }

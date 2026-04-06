@@ -22,8 +22,7 @@ namespace Rougelette
         {
             //AND THIS
             InitializeComponent();
-            shop = new frmItemShop();
-            rouge = new frmRougelette(this, shop);
+            rouge = new frmRougelette(this);
             charSelect = new frmCharacterSelect(rouge);
             
             charSelect.Hide();
