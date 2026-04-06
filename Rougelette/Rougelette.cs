@@ -236,14 +236,21 @@ namespace Rougelette
 
         private void lstItemDisplay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var selItem = lstItemDisplay.SelectedItem;
-            if (selItem is ABigSword s)
+            try
             {
-                gold += s.IWait();
-                if (DurCheck(s.Durability))
-                    items.Remove(s);
+                Item selItem = (Item)lstItemDisplay.SelectedItem;
+                if (selItem is ABigSword s)
+                {
+                    gold += s.IWait();
+                    if (DurCheck(s.Durability))
+                        items.Remove(s);
+                }
+                RepopLst();
             }
-            RepopLst();
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error selecting item {ex}");
+            }
         }
 
         private void RepopLst()
