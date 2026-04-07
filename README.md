@@ -9,7 +9,7 @@ Add the item to the lstItems that they buy in the shop form and when the item is
 
 Login Screen (Done)
 
-Static Class(Still dont know just throw a method in a static class)
+Static Class(Done)
 
 Unit Testing(Ez addtion just gotta do it)
 
