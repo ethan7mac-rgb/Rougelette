@@ -9,9 +9,9 @@ Add the item to the lstItems that they buy in the shop form and when the item is
 
 Login Screen (Done)
 
-Static Class(Still dont know)
+Static Class(Still dont know just throw a method in a static class)
 
-Unit Testing(Ez addtion)
+Unit Testing(Ez addtion just gotta do it)
 
 Find some place for op overload(Done)
 
@@ -19,4 +19,4 @@ Interface(Too tired of this could probably shove a few diffrent methods in a int
 
 Find place for method overload(Done)
 
-More items and characters
+More items and characters(What it says)
