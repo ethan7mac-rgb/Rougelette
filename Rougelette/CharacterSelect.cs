@@ -14,10 +14,12 @@ namespace Rougelette
 {
     public partial class frmCharacterSelect : Form
     {
+        //Global
         private frmRougelette roguelette;
         public frmCharacterSelect(frmRougelette rogue)
         {
             InitializeComponent();
+            //Set our global 
             roguelette = rogue;
         }
         private void btnCowBoySelect_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace Rougelette
             //Make sure this is called last in any characters button click event otherwise the character wont be made first
             MainGameSwap();
         }
+        //Method that opens the main game and hides this
         private void MainGameSwap()
         {
             roguelette.Show();

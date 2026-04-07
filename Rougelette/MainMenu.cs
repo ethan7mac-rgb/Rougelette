@@ -13,38 +13,37 @@ namespace Rougelette
 {
     public partial class frmMainMenu : Form
     {
-        //DONT TOUCH THIS IDIOTS
+        //Globals used throughout the form
         private frmCharacterSelect charSelect;
         private frmRougelette rouge;
-        private frmItemShop shop;
-        private record SaveData(string Character, int Gold, int Fee, int RoundCount);
         public frmMainMenu()
         {
-            //AND THIS
             InitializeComponent();
+            //Creating our frms and sending in forms they need
             rouge = new frmRougelette(this);
             charSelect = new frmCharacterSelect(rouge);
-            
+            //hide them once made
             charSelect.Hide();
             rouge.Hide();
         }
+        //Grab the username from txtUser
         public string Username => txtUser.Text.Trim();
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            //grab the username and ensure it doesnt contain any empty spaces
-            string userName  = txtUser.Text.Trim();
-            if(userName == "")
+            //Check if user is blank
+            if(Username == "")
             {
                 MessageBox.Show("Enter a username");
             }
             else
             {
+                //If not open charSelect and hide this
                 charSelect.Show();
                 this.Hide();
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        //Closes the forms made when this form is made and this one
+        private void btnExit_Click(object sender, EventArgs e)
         {
             charSelect.Close();
             rouge.Close();

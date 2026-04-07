@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
             picTitle = new PictureBox();
             btnNewGame = new Button();
-            button1 = new Button();
+            btnExit = new Button();
             txtUser = new TextBox();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)picTitle).BeginInit();
@@ -57,15 +57,15 @@
             btnNewGame.UseVisualStyleBackColor = true;
             btnNewGame.Click += btnNewGame_Click;
             // 
-            // button1
+            // btnExit
             // 
-            button1.Location = new Point(587, 332);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 39);
-            button1.TabIndex = 2;
-            button1.Text = "Exit";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnExit.Location = new Point(587, 332);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(120, 39);
+            btnExit.TabIndex = 2;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // txtUser
             // 
@@ -94,7 +94,7 @@
             ClientSize = new Size(794, 450);
             Controls.Add(label1);
             Controls.Add(txtUser);
-            Controls.Add(button1);
+            Controls.Add(btnExit);
             Controls.Add(btnNewGame);
             Controls.Add(picTitle);
             Name = "frmMainMenu";
@@ -108,7 +108,7 @@
 
         private PictureBox picTitle;
         private Button btnNewGame;
-        private Button button1;
+        private Button btnExit;
         private TextBox txtUser;
         private Label label1;
     }
