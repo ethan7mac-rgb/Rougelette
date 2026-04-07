@@ -18,3 +18,5 @@ Find some place for op overload(Done)
 Interface(Too tired of this could probably shove a few diffrent methods in a interface)
 
 Find place for method overload(Done)
+
+More items and characters
