@@ -35,14 +35,17 @@
             btnRouge = new Button();
             pictureBox2 = new PictureBox();
             btnBigSword = new Button();
+            pictureBox3 = new PictureBox();
+            btnWheelBuy = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.merchant;
-            pictureBox1.Location = new Point(345, 16);
+            pictureBox1.Location = new Point(350, 16);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(145, 178);
@@ -78,9 +81,9 @@
             lblGreetings.BackColor = SystemColors.ActiveCaptionText;
             lblGreetings.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblGreetings.ForeColor = SystemColors.ButtonHighlight;
-            lblGreetings.Location = new Point(287, 257);
+            lblGreetings.Location = new Point(233, 198);
             lblGreetings.Name = "lblGreetings";
-            lblGreetings.Size = new Size(294, 40);
+            lblGreetings.Size = new Size(387, 47);
             lblGreetings.TabIndex = 16;
             lblGreetings.Text = "Stay Awhile and Listen";
             lblGreetings.TextAlign = ContentAlignment.MiddleCenter;
@@ -99,9 +102,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.regent_forge;
-            pictureBox2.Location = new Point(11, 295);
+            pictureBox2.Location = new Point(11, 277);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(129, 68);
+            pictureBox2.Size = new Size(129, 86);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
@@ -116,12 +119,34 @@
             btnBigSword.UseVisualStyleBackColor = true;
             btnBigSword.Click += btnBigSword_Click;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.spin1;
+            pictureBox3.Location = new Point(200, 277);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(153, 86);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 20;
+            pictureBox3.TabStop = false;
+            // 
+            // btnWheelBuy
+            // 
+            btnWheelBuy.Location = new Point(200, 369);
+            btnWheelBuy.Name = "btnWheelBuy";
+            btnWheelBuy.Size = new Size(153, 50);
+            btnWheelBuy.TabIndex = 21;
+            btnWheelBuy.Text = "Buy Random Wheel\r\n4 Gold";
+            btnWheelBuy.UseVisualStyleBackColor = true;
+            btnWheelBuy.Click += btnWheelBuy_Click;
+            // 
             // frmItemShop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
             ClientSize = new Size(914, 920);
+            Controls.Add(btnWheelBuy);
+            Controls.Add(pictureBox3);
             Controls.Add(btnBigSword);
             Controls.Add(pictureBox2);
             Controls.Add(btnRouge);
@@ -134,6 +159,7 @@
             Text = "ItemShop";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,5 +173,7 @@
         private Button btnRouge;
         private PictureBox pictureBox2;
         private Button btnBigSword;
+        private PictureBox pictureBox3;
+        private Button btnWheelBuy;
     }
 }
