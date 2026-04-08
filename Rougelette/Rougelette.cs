@@ -170,6 +170,7 @@ namespace Rougelette
             cboColour.Items.Add("None");
             cboNum.Items.Add("None");
             nudBet.Value = 0;
+            lstItemDisplay.Items.Clear();
         }
 
         private void btnMainMenu_Click(object sender, EventArgs e)
@@ -289,8 +290,41 @@ namespace Rougelette
                     if (ItemHelper.DurCheck(s.Durability))
                         items.Remove(s);
                 }
+<<<<<<< Updated upstream
                 //Refresh our list
+=======
+                if (selItem is WheelOfFortune wf)
+                {
+                    int res = wf.WheelSpinRes();
+                    if(res < 0)
+                    {
+                        fee += res;
+                    }
+                    else
+                    {
+                        gold += res;
+                    }
+                    if (ItemHelper.DurCheck(wf.Durability))
+                        items.Remove(wf);
+                }
+                if (selItem is WheelOfMisfortune wm)
+                {
+                    int res = wm.WheelSpinRes();
+                    if (res < 0)
+                    {
+                        gold += res;
+                    }
+                    else
+                    {
+                        fee += res;
+                    }
+                    if (ItemHelper.DurCheck(wm.Durability))
+                        items.Remove(wm);
+                }
+                //Refresh our list and gold
+>>>>>>> Stashed changes
                 RepopLst();
+                lblCoins.Text = gold.ToString();
             }
             catch(Exception ex)
             {

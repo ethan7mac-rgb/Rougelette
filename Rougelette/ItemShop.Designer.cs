@@ -35,8 +35,8 @@
             btnRouge = new Button();
             pictureBox2 = new PictureBox();
             btnBigSword = new Button();
-            btnBanana = new Button();
             pictureBox3 = new PictureBox();
+            btnWheelBuy = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -45,8 +45,8 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.merchant;
-            pictureBox1.Location = new Point(431, 20);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            pictureBox1.Location = new Point(350, 16);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(145, 178);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -83,10 +83,9 @@
             lblGreetings.BackColor = SystemColors.ActiveCaptionText;
             lblGreetings.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblGreetings.ForeColor = SystemColors.ButtonHighlight;
-            lblGreetings.Location = new Point(358, 274);
-            lblGreetings.Margin = new Padding(4, 0, 4, 0);
+            lblGreetings.Location = new Point(233, 198);
             lblGreetings.Name = "lblGreetings";
-            lblGreetings.Size = new Size(368, 50);
+            lblGreetings.Size = new Size(387, 47);
             lblGreetings.TabIndex = 16;
             lblGreetings.Text = "Stay Awhile and Listen";
             lblGreetings.TextAlign = ContentAlignment.MiddleCenter;
@@ -105,10 +104,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.regent_forge;
-            pictureBox2.Location = new Point(14, 369);
-            pictureBox2.Margin = new Padding(4, 4, 4, 4);
+            pictureBox2.Location = new Point(11, 277);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(161, 85);
+            pictureBox2.Size = new Size(129, 86);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
@@ -124,35 +122,33 @@
             btnBigSword.UseVisualStyleBackColor = true;
             btnBigSword.Click += btnBigSword_Click;
             // 
-            // btnBanana
-            // 
-            btnBanana.Location = new Point(200, 461);
-            btnBanana.Margin = new Padding(4);
-            btnBanana.Name = "btnBanana";
-            btnBanana.Size = new Size(161, 62);
-            btnBanana.TabIndex = 21;
-            btnBanana.Text = "Buy A Big Banana\r\n3 Gold";
-            btnBanana.UseVisualStyleBackColor = true;
-            btnBanana.Click += btnBanana_Click;
-            // 
             // pictureBox3
             // 
-            pictureBox3.Image = Properties.Resources.regent_forge;
-            pictureBox3.Location = new Point(200, 369);
-            pictureBox3.Margin = new Padding(4);
+            pictureBox3.Image = Properties.Resources.spin1;
+            pictureBox3.Location = new Point(200, 277);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(161, 85);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.Size = new Size(153, 86);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 20;
             pictureBox3.TabStop = false;
+            // 
+            // btnWheelBuy
+            // 
+            btnWheelBuy.Location = new Point(200, 369);
+            btnWheelBuy.Name = "btnWheelBuy";
+            btnWheelBuy.Size = new Size(153, 50);
+            btnWheelBuy.TabIndex = 21;
+            btnWheelBuy.Text = "Buy Random Wheel\r\n4 Gold";
+            btnWheelBuy.UseVisualStyleBackColor = true;
+            btnWheelBuy.Click += btnWheelBuy_Click;
             // 
             // frmItemShop
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            ClientSize = new Size(1142, 1150);
-            Controls.Add(btnBanana);
+            ClientSize = new Size(914, 920);
+            Controls.Add(btnWheelBuy);
             Controls.Add(pictureBox3);
             Controls.Add(btnBigSword);
             Controls.Add(pictureBox2);
@@ -180,7 +176,7 @@
         private Button btnRouge;
         private PictureBox pictureBox2;
         private Button btnBigSword;
-        private Button btnBanana;
         private PictureBox pictureBox3;
+        private Button btnWheelBuy;
     }
 }
