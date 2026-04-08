@@ -25,7 +25,19 @@ namespace Rougelette
             //hide them once made
             charSelect.Hide();
             rouge.Hide();
+            CreateTextFile();
         }
+
+        private void CreateTextFile()
+        {
+            //Creates text file if it doesnt exist
+            string path = Path.Combine(Application.StartupPath, "users.txt");
+            if (!File.Exists(path))
+            {
+                using StreamWriter writer = File.CreateText(path);
+            }
+        }
+
         //Grab the username from txtUser
         public string Username => txtUser.Text.Trim();
         private void btnNewGame_Click(object sender, EventArgs e)

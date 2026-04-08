@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRougelette));
-            picChar = new PictureBox();
             lblCharName = new Label();
             btnSpin = new Button();
             lstItemDisplay = new ListBox();
@@ -57,22 +56,11 @@
             lblHS = new Label();
             label7 = new Label();
             btnSaveScore = new Button();
-            ((System.ComponentModel.ISupportInitialize)picChar).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             grpNumBet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudBet).BeginInit();
             SuspendLayout();
-            // 
-            // picChar
-            // 
-            picChar.Image = (Image)resources.GetObject("picChar.Image");
-            picChar.Location = new Point(600, 12);
-            picChar.Name = "picChar";
-            picChar.Size = new Size(185, 167);
-            picChar.SizeMode = PictureBoxSizeMode.StretchImage;
-            picChar.TabIndex = 0;
-            picChar.TabStop = false;
             // 
             // lblCharName
             // 
@@ -80,7 +68,7 @@
             lblCharName.BackColor = SystemColors.ActiveCaptionText;
             lblCharName.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCharName.ForeColor = SystemColors.ButtonHighlight;
-            lblCharName.Location = new Point(600, 196);
+            lblCharName.Location = new Point(600, 9);
             lblCharName.Name = "lblCharName";
             lblCharName.Size = new Size(185, 37);
             lblCharName.TabIndex = 1;
@@ -88,7 +76,7 @@
             // 
             // btnSpin
             // 
-            btnSpin.Location = new Point(27, 637);
+            btnSpin.Location = new Point(31, 456);
             btnSpin.Name = "btnSpin";
             btnSpin.Size = new Size(125, 51);
             btnSpin.TabIndex = 4;
@@ -101,7 +89,7 @@
             lstItemDisplay.FormattingEnabled = true;
             lstItemDisplay.ItemHeight = 15;
             lstItemDisplay.Items.AddRange(new object[] { "Items:" });
-            lstItemDisplay.Location = new Point(600, 237);
+            lstItemDisplay.Location = new Point(600, 53);
             lstItemDisplay.Name = "lstItemDisplay";
             lstItemDisplay.Size = new Size(185, 454);
             lstItemDisplay.TabIndex = 5;
@@ -120,7 +108,7 @@
             // 
             // btnMainMenu
             // 
-            btnMainMenu.Location = new Point(215, 637);
+            btnMainMenu.Location = new Point(244, 456);
             btnMainMenu.Name = "btnMainMenu";
             btnMainMenu.Size = new Size(125, 51);
             btnMainMenu.TabIndex = 9;
@@ -170,7 +158,7 @@
             // 
             // btnShop
             // 
-            btnShop.Location = new Point(420, 637);
+            btnShop.Location = new Point(456, 456);
             btnShop.Name = "btnShop";
             btnShop.Size = new Size(125, 51);
             btnShop.TabIndex = 14;
@@ -361,7 +349,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(797, 700);
+            ClientSize = new Size(797, 527);
             Controls.Add(btnSaveScore);
             Controls.Add(lblHS);
             Controls.Add(label7);
@@ -381,10 +369,8 @@
             Controls.Add(lstItemDisplay);
             Controls.Add(btnSpin);
             Controls.Add(lblCharName);
-            Controls.Add(picChar);
             Name = "frmRougelette";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)picChar).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -397,8 +383,6 @@
         }
 
         #endregion
-
-        private PictureBox picChar;
         private Label lblCharName;
         private Button btnSpin;
         private ListBox lstItemDisplay;
