@@ -150,7 +150,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Image = Properties.Resources.spin1;
+            pictureBox4.Image = Properties.Resources.momoney;
             pictureBox4.Location = new Point(400, 277);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(220, 86);
@@ -180,7 +180,7 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.Image = Properties.Resources.spin1;
+            pictureBox5.Image = Properties.Resources.momoney2;
             pictureBox5.Location = new Point(641, 277);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(220, 86);
@@ -190,7 +190,7 @@
             // 
             // pictureBox6
             // 
-            pictureBox6.Image = Properties.Resources.spin1;
+            pictureBox6.Image = Properties.Resources.life;
             pictureBox6.Location = new Point(11, 462);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(132, 86);
