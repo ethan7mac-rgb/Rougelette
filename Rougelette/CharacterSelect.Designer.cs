@@ -152,9 +152,11 @@
             // 
             // picChar4
             // 
+            picChar4.Image = Properties.Resources.TrustFund;
             picChar4.Location = new Point(722, 20);
             picChar4.Name = "picChar4";
             picChar4.Size = new Size(192, 129);
+            picChar4.SizeMode = PictureBoxSizeMode.StretchImage;
             picChar4.TabIndex = 10;
             picChar4.TabStop = false;
             // 
@@ -204,9 +206,11 @@
             // 
             // picChar5
             // 
+            picChar5.Image = Properties.Resources.Wretch;
             picChar5.Location = new Point(941, 20);
             picChar5.Name = "picChar5";
             picChar5.Size = new Size(192, 129);
+            picChar5.SizeMode = PictureBoxSizeMode.StretchImage;
             picChar5.TabIndex = 13;
             picChar5.TabStop = false;
             // 
