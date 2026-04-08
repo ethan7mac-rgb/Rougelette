@@ -299,6 +299,8 @@ namespace Rougelette
         {
             //Checks if the roundcount is greater than hs if it is update lblHS
             int highScore = Convert.ToInt32(lblHS.Text);
+            if (lblHS.Text == "")
+                highScore = 0;
             if (Convert.ToInt32(lblHS.Text) < RoundCount)
                 lblHS.Text = RoundCount.ToString();
         }

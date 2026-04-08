@@ -321,6 +321,7 @@
             lblHS.Name = "lblHS";
             lblHS.Size = new Size(73, 30);
             lblHS.TabIndex = 22;
+            lblHS.Text = "0";
             // 
             // label7
             // 
