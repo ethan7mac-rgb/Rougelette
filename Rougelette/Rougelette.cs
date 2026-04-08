@@ -146,12 +146,25 @@ namespace Rougelette
             //Executes when the user loses
             if (gold <= 0)
             {
-                lblCoins.Text = "0";
-                MessageBox.Show("You Lost");
-                Reset();
-                this.Hide();
-                mainMenu.Show();
-                return true;
+                foreach (Item I in lstItemDisplay.Items) 
+                {
+                    if (I is ExtraLife el)
+                    {
+                        gold += el.ExtraChance(fee);
+                        if (ItemHelper.DurCheck(el.Durability))
+                            items.Remove(el);
+                        RepopLst();
+                        lblCoins.Text = gold.ToString();
+                        return false;
+                    }
+                }
+
+                    lblCoins.Text = "0";
+                    MessageBox.Show("You Lost");
+                    Reset();
+                    this.Hide();
+                    mainMenu.Show();
+                    return true;
             }
             else
             {
@@ -292,8 +305,6 @@ namespace Rougelette
                     if (ItemHelper.DurCheck(s.Durability))
                         items.Remove(s);
                 }
-                //Refresh our list
-
                 if (selItem is WheelOfFortune wf)
                 {
                     int res = wf.WheelSpinRes();
@@ -323,6 +334,18 @@ namespace Rougelette
                         items.Remove(wm);
                 }
                 //Refresh our list and gold
+                if (selItem is ExtraMoney em)
+                {
+                    ReturnNum += em.MoneyMoney();
+                    if (ItemHelper.DurCheck(em.Durability))
+                        items.Remove(em);
+                }
+                if (selItem is ExtraMoney2 me)
+                {
+                    ReturnColour += me.MoneyMoney2();
+                    if (ItemHelper.DurCheck(me.Durability))
+                        items.Remove(me);
+                }
                 RepopLst();
                 lblCoins.Text = gold.ToString();
                 LoseCheck();
