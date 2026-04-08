@@ -99,6 +99,11 @@ namespace Rougelette
                             spinRes = w.Spin();
                             showSpin(spinRes);
                         }
+                        else if(selectedChar is Chris cr)
+                        {
+                            spinRes = cr.Spin();
+                            showSpin(spinRes);
+                        }
                         //Call bet
                         Bet(bet);
                         //Refresh gold

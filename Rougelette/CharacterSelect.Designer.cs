@@ -44,11 +44,15 @@
             btnWretchSelect = new Button();
             lblCharDesc5 = new Label();
             picChar5 = new PictureBox();
+            btnChrisSelect = new Button();
+            lblCharDesc6 = new Label();
+            picChar6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picChar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picChar2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picChar3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picChar4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picChar5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picChar6).BeginInit();
             SuspendLayout();
             // 
             // picChar1
@@ -214,6 +218,38 @@
             picChar5.TabIndex = 13;
             picChar5.TabStop = false;
             // 
+            // btnChrisSelect
+            // 
+            btnChrisSelect.Location = new Point(18, 545);
+            btnChrisSelect.Margin = new Padding(4, 5, 4, 5);
+            btnChrisSelect.Name = "btnChrisSelect";
+            btnChrisSelect.Size = new Size(192, 44);
+            btnChrisSelect.TabIndex = 18;
+            btnChrisSelect.Text = "Select Chris London";
+            btnChrisSelect.UseVisualStyleBackColor = true;
+            btnChrisSelect.Click += btnChrisSelect_Click;
+            // 
+            // lblCharDesc6
+            // 
+            lblCharDesc6.ForeColor = SystemColors.ButtonHighlight;
+            lblCharDesc6.Location = new Point(18, 458);
+            lblCharDesc6.Margin = new Padding(4, 0, 4, 0);
+            lblCharDesc6.Name = "lblCharDesc6";
+            lblCharDesc6.Size = new Size(192, 84);
+            lblCharDesc6.TabIndex = 17;
+            lblCharDesc6.Text = "ABSOLUTE CHRIMA";
+            lblCharDesc6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // picChar6
+            // 
+            picChar6.Image = Properties.Resources.Chrinema;
+            picChar6.Location = new Point(18, 324);
+            picChar6.Name = "picChar6";
+            picChar6.Size = new Size(192, 129);
+            picChar6.SizeMode = PictureBoxSizeMode.StretchImage;
+            picChar6.TabIndex = 16;
+            picChar6.TabStop = false;
+            // 
             // frmCharacterSelect
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -221,6 +257,9 @@
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1159, 750);
+            Controls.Add(btnChrisSelect);
+            Controls.Add(lblCharDesc6);
+            Controls.Add(picChar6);
             Controls.Add(btnWretchSelect);
             Controls.Add(lblCharDesc5);
             Controls.Add(picChar5);
@@ -244,6 +283,7 @@
             ((System.ComponentModel.ISupportInitialize)picChar3).EndInit();
             ((System.ComponentModel.ISupportInitialize)picChar4).EndInit();
             ((System.ComponentModel.ISupportInitialize)picChar5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picChar6).EndInit();
             ResumeLayout(false);
         }
 
@@ -264,5 +304,8 @@
         private Button btnWretchSelect;
         private Label lblCharDesc5;
         private PictureBox picChar5;
+        private Button btnChrisSelect;
+        private Label lblCharDesc6;
+        private PictureBox picChar6;
     }
 }
