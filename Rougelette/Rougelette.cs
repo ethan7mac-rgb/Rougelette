@@ -87,8 +87,18 @@ namespace Rougelette
                             spinRes = m.Spin();
                             showSpin(spinRes);
                         }
-                        //Call bet
-                        Bet(bet);
+                        else if (selectedChar is TrustFund t)
+                        {
+                            spinRes = t.Spin();
+                            showSpin(spinRes);
+                        }
+                        else if (selectedChar is Wretch w)
+                        {
+                            spinRes = w.Spin();
+                            showSpin(spinRes);
+                        }
+                            //Call bet
+                            Bet(bet);
                         //Refresh gold
                         lblCoins.Text = gold.ToString();
                         //Check both lose and highscore

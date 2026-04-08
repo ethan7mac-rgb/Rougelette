@@ -37,13 +37,25 @@ namespace Rougelette
             ABigSword sword = new ABigSword();
             //Sets gold equal to gold - sword price all checking done in op overload
             gold = gold - sword;
-            if(gold != buyChk)
+            if (gold != buyChk)
             {
                 //Add the sword to list and disable the button as you can only buy each item once a game
                 shoppingList.Add(sword);
                 btnBigSword.Enabled = false;
             }
-            
+
+        }
+
+        private void btnBanana_Click(object sender, EventArgs e)
+        {
+            int buyChk = gold;
+            Banana banana = new Banana();
+            gold = gold - banana;
+            if (gold != buyChk)
+            {
+                shoppingList.Add(banana);
+                btnBanana.Enabled = false;
+            }
         }
     }
 }

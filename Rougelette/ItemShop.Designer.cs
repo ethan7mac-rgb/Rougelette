@@ -35,15 +35,18 @@
             btnRouge = new Button();
             pictureBox2 = new PictureBox();
             btnBigSword = new Button();
+            btnBanana = new Button();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.merchant;
-            pictureBox1.Location = new Point(345, 16);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(431, 20);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(145, 178);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -55,9 +58,10 @@
             lblCoins.BackColor = SystemColors.ActiveCaptionText;
             lblCoins.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCoins.ForeColor = SystemColors.ButtonHighlight;
-            lblCoins.Location = new Point(95, 16);
+            lblCoins.Location = new Point(119, 20);
+            lblCoins.Margin = new Padding(4, 0, 4, 0);
             lblCoins.Name = "lblCoins";
-            lblCoins.Size = new Size(114, 40);
+            lblCoins.Size = new Size(142, 50);
             lblCoins.TabIndex = 15;
             lblCoins.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -67,9 +71,10 @@
             label2.BackColor = SystemColors.ActiveCaptionText;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(14, 16);
+            label2.Location = new Point(18, 20);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(101, 37);
+            label2.Size = new Size(120, 45);
             label2.TabIndex = 14;
             label2.Text = "Coins: ";
             // 
@@ -78,19 +83,20 @@
             lblGreetings.BackColor = SystemColors.ActiveCaptionText;
             lblGreetings.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblGreetings.ForeColor = SystemColors.ButtonHighlight;
-            lblGreetings.Location = new Point(287, 257);
+            lblGreetings.Location = new Point(358, 274);
+            lblGreetings.Margin = new Padding(4, 0, 4, 0);
             lblGreetings.Name = "lblGreetings";
-            lblGreetings.Size = new Size(294, 40);
+            lblGreetings.Size = new Size(368, 50);
             lblGreetings.TabIndex = 16;
             lblGreetings.Text = "Stay Awhile and Listen";
             lblGreetings.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnRouge
             // 
-            btnRouge.Location = new Point(758, 16);
-            btnRouge.Margin = new Padding(3, 4, 3, 4);
+            btnRouge.Location = new Point(948, 20);
+            btnRouge.Margin = new Padding(4, 5, 4, 5);
             btnRouge.Name = "btnRouge";
-            btnRouge.Size = new Size(143, 68);
+            btnRouge.Size = new Size(179, 85);
             btnRouge.TabIndex = 17;
             btnRouge.Text = "Leave Shop";
             btnRouge.UseVisualStyleBackColor = true;
@@ -99,29 +105,55 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.regent_forge;
-            pictureBox2.Location = new Point(11, 295);
+            pictureBox2.Location = new Point(14, 369);
+            pictureBox2.Margin = new Padding(4, 4, 4, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(129, 68);
+            pictureBox2.Size = new Size(161, 85);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
             // 
             // btnBigSword
             // 
-            btnBigSword.Location = new Point(11, 369);
+            btnBigSword.Location = new Point(14, 461);
+            btnBigSword.Margin = new Padding(4, 4, 4, 4);
             btnBigSword.Name = "btnBigSword";
-            btnBigSword.Size = new Size(129, 50);
+            btnBigSword.Size = new Size(161, 62);
             btnBigSword.TabIndex = 19;
             btnBigSword.Text = "Buy A Big Sword\r\n2 Gold";
             btnBigSword.UseVisualStyleBackColor = true;
             btnBigSword.Click += btnBigSword_Click;
             // 
+            // btnBanana
+            // 
+            btnBanana.Location = new Point(200, 461);
+            btnBanana.Margin = new Padding(4);
+            btnBanana.Name = "btnBanana";
+            btnBanana.Size = new Size(161, 62);
+            btnBanana.TabIndex = 21;
+            btnBanana.Text = "Buy A Big Banana\r\n3 Gold";
+            btnBanana.UseVisualStyleBackColor = true;
+            btnBanana.Click += btnBanana_Click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.regent_forge;
+            pictureBox3.Location = new Point(200, 369);
+            pictureBox3.Margin = new Padding(4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(161, 85);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 20;
+            pictureBox3.TabStop = false;
+            // 
             // frmItemShop
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            ClientSize = new Size(914, 920);
+            ClientSize = new Size(1142, 1150);
+            Controls.Add(btnBanana);
+            Controls.Add(pictureBox3);
             Controls.Add(btnBigSword);
             Controls.Add(pictureBox2);
             Controls.Add(btnRouge);
@@ -129,11 +161,12 @@
             Controls.Add(lblCoins);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmItemShop";
             Text = "ItemShop";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,5 +180,7 @@
         private Button btnRouge;
         private PictureBox pictureBox2;
         private Button btnBigSword;
+        private Button btnBanana;
+        private PictureBox pictureBox3;
     }
 }
