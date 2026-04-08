@@ -14,10 +14,10 @@ namespace Rougelette.Items
             Price = 3;
             Durability = 1;
         }
-        public int ExtraChance()
-        {
+        public int ExtraChance(int fee)
+        { 
             Durability--;
-            return 1;
+            return (1-fee);
         }
     }
 }

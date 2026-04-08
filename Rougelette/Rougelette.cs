@@ -140,18 +140,21 @@ namespace Rougelette
                 {
                     if (I is ExtraLife el)
                     {
-                        gold += el.ExtraChance();
+                        gold += el.ExtraChance(fee);
+                        if (ItemHelper.DurCheck(el.Durability))
+                            items.Remove(el);
+                        RepopLst();
+                        lblCoins.Text = gold.ToString();
+                        return false;
                     }
                 }
-                if (gold <= 0)
-                {
+
                     lblCoins.Text = "0";
                     MessageBox.Show("You Lost");
                     Reset();
                     this.Hide();
                     mainMenu.Show();
                     return true;
-                }
             }
             else
             {
