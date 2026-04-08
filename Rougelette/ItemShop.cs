@@ -61,5 +61,47 @@ namespace Rougelette
                 btnWheelBuy.Enabled = false;
             }
         }
+
+        private void btnExtraMoney_Click(object sender, EventArgs e)
+        {
+            int buyChk = gold;
+            ExtraMoney money = new ExtraMoney();
+
+            gold = gold - money;
+            if (gold != buyChk)
+            {
+                //Add the ExtraMoney to list and disable the button as you can only buy each item once a game
+                shoppingList.Add(money);
+                btnExtraMoney.Enabled = false;
+            }
+        }
+
+        private void btnExtraMoney2_Click(object sender, EventArgs e)
+        {
+            int buyChk = gold;
+            ExtraMoney2 money2 = new ExtraMoney2();
+
+            gold = gold - money2;
+            if (gold != buyChk)
+            {
+                //Add the ExtraMoney to list and disable the button as you can only buy each item once a game
+                shoppingList.Add(money2);
+                btnExtraMoney2.Enabled = false;
+            }
+        }
+
+        private void btnExtraLife_Click(object sender, EventArgs e)
+        {
+            int buyChk = gold;
+            ExtraLife life = new ExtraLife();
+
+            gold = gold - life;
+            if (gold != buyChk)
+            {
+                //Add the ExtraMoney to list and disable the button as you can only buy each item once a game
+                shoppingList.Add(life);
+                btnExtraLife.Enabled = false;
+            }
+        }
     }
 }
