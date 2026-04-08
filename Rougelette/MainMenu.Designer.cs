@@ -39,10 +39,10 @@
             // 
             // btnNewGame
             // 
-            btnNewGame.Location = new Point(107, 553);
-            btnNewGame.Margin = new Padding(4, 5, 4, 5);
+            btnNewGame.Location = new Point(86, 442);
+            btnNewGame.Margin = new Padding(3, 4, 3, 4);
             btnNewGame.Name = "btnNewGame";
-            btnNewGame.Size = new Size(171, 65);
+            btnNewGame.Size = new Size(137, 52);
             btnNewGame.TabIndex = 1;
             btnNewGame.Text = "New Game";
             btnNewGame.UseVisualStyleBackColor = true;
@@ -50,10 +50,10 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(839, 553);
-            btnExit.Margin = new Padding(4, 5, 4, 5);
+            btnExit.Location = new Point(671, 442);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(171, 65);
+            btnExit.Size = new Size(137, 52);
             btnExit.TabIndex = 2;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -62,45 +62,46 @@
             // txtUser
             // 
             txtUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUser.Location = new Point(475, 461);
-            txtUser.Margin = new Padding(4, 5, 4, 5);
+            txtUser.Location = new Point(380, 369);
+            txtUser.Margin = new Padding(3, 4, 3, 4);
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(170, 45);
+            txtUser.Size = new Size(137, 39);
             txtUser.TabIndex = 3;
             // 
             // label1
             // 
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(475, 406);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(380, 325);
             label1.Name = "label1";
-            label1.Size = new Size(171, 50);
+            label1.Size = new Size(137, 40);
             label1.TabIndex = 4;
             label1.Text = "Username:";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.RougeletteTitle;
-            pictureBox1.Location = new Point(286, 11);
+            pictureBox1.Location = new Point(150, 11);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(610, 392);
+            pictureBox1.Size = new Size(567, 241);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // frmMainMenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1134, 750);
+            ClientSize = new Size(907, 600);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(txtUser);
             Controls.Add(btnExit);
             Controls.Add(btnNewGame);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMainMenu";
             Text = "Main Menu";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
