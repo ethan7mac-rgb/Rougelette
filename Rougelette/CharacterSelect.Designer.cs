@@ -237,7 +237,7 @@
             lblCharDesc6.Name = "lblCharDesc6";
             lblCharDesc6.Size = new Size(192, 84);
             lblCharDesc6.TabIndex = 17;
-            lblCharDesc6.Text = "ABSOLUTE CHRISIMA";
+            lblCharDesc6.Text = "ABSOLUTE CHRIMA";
             lblCharDesc6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // picChar6
