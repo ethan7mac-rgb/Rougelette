@@ -17,6 +17,8 @@ namespace Rougelette
         private int gold;
         private int fee = 0;
         private int RoundCount = 0;
+        private int ReturnNum = 3;
+        private int ReturnColour = 2;
         public frmRougelette(frmMainMenu main)
         {
             InitializeComponent();
@@ -246,7 +248,7 @@ namespace Rougelette
                 //Checks if user won and adds it to winnings
                 if (cboNum.SelectedItem.ToString().ToLower() == lblSpinRes.Text.ToLower())
                 {
-                    winnings += (bet * 3);
+                    winnings += (bet * ReturnNum);
                 }
             }
             if (cboColour.SelectedIndex > 0)
@@ -256,7 +258,7 @@ namespace Rougelette
                 string colour = colourText.Split(' ')[0];
                 if (colour.ToLower() == lblSpinResColour.Text.ToLower())
                 {
-                    winnings += (bet * 2);
+                    winnings += (bet * ReturnColour);
                 }
 
             }
