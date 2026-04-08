@@ -121,6 +121,9 @@
   <data name="spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TrustFund" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrustFund.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="147469001.6dcf339c.200x200o1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\147469001.6dcf339c.200x200o.895fe941d38c1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,13 +136,16 @@
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spin1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="regent_forge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\regent_forge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tempCowboy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tempCowboy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spin1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wretch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wretch.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

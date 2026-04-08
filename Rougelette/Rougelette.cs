@@ -89,6 +89,16 @@ namespace Rougelette
                             spinRes = m.Spin();
                             showSpin(spinRes);
                         }
+                        else if (selectedChar is TrustFund t)
+                        {
+                            spinRes = t.Spin();
+                            showSpin(spinRes);
+                        }
+                        else if (selectedChar is Wretch w)
+                        {
+                            spinRes = w.Spin();
+                            showSpin(spinRes);
+                        }
                         //Call bet
                         Bet(bet);
                         //Refresh gold
@@ -323,6 +333,7 @@ namespace Rougelette
                     if (ItemHelper.DurCheck(wm.Durability))
                         items.Remove(wm);
                 }
+                //Refresh our list and gold
                 if (selItem is ExtraMoney em)
                 {
                     ReturnNum += em.MoneyMoney();
@@ -337,6 +348,7 @@ namespace Rougelette
                 }
                 RepopLst();
                 lblCoins.Text = gold.ToString();
+                LoseCheck();
             }
             catch(Exception ex)
             {
