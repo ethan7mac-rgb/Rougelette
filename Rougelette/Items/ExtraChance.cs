@@ -17,7 +17,7 @@ namespace Rougelette.Items
         public int ExtraChance(int fee)
         { 
             Durability--;
-            return (1-fee);
+            return (1 + fee);
         }
     }
 }
