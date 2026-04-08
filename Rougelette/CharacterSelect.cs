@@ -78,5 +78,14 @@ namespace Rougelette
 
             MainGameSwap();
         }
+
+        private void btnChrisSelect_Click(object sender, EventArgs e)
+        {
+            Chris chris = new Chris();
+            roguelette.SetChar(chris);
+            this.DialogResult = DialogResult.OK;
+
+            MainGameSwap();
+        }
     }
 }
