@@ -37,9 +37,15 @@
             btnBigSword = new Button();
             pictureBox3 = new PictureBox();
             btnWheelBuy = new Button();
+            pictureBox4 = new PictureBox();
+            btnExtraMoney = new Button();
+            btnExtraMoney2 = new Button();
+            pictureBox5 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -139,12 +145,56 @@
             btnWheelBuy.UseVisualStyleBackColor = true;
             btnWheelBuy.Click += btnWheelBuy_Click;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.spin1;
+            pictureBox4.Location = new Point(400, 277);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(220, 86);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 22;
+            pictureBox4.TabStop = false;
+            // 
+            // btnExtraMoney
+            // 
+            btnExtraMoney.Location = new Point(400, 369);
+            btnExtraMoney.Name = "btnExtraMoney";
+            btnExtraMoney.Size = new Size(220, 50);
+            btnExtraMoney.TabIndex = 23;
+            btnExtraMoney.Text = "Buy Extra Return from Number 10  Gold";
+            btnExtraMoney.UseVisualStyleBackColor = true;
+            btnExtraMoney.Click += btnExtraMoney_Click;
+            // 
+            // btnExtraMoney2
+            // 
+            btnExtraMoney2.Location = new Point(641, 369);
+            btnExtraMoney2.Name = "btnExtraMoney2";
+            btnExtraMoney2.Size = new Size(220, 50);
+            btnExtraMoney2.TabIndex = 24;
+            btnExtraMoney2.Text = "Buy Extra Return from Colour 10  Gold";
+            btnExtraMoney2.UseVisualStyleBackColor = true;
+            btnExtraMoney2.Click += btnExtraMoney2_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.spin1;
+            pictureBox5.Location = new Point(641, 277);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(220, 86);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 25;
+            pictureBox5.TabStop = false;
+            // 
             // frmItemShop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
             ClientSize = new Size(914, 920);
+            Controls.Add(pictureBox5);
+            Controls.Add(btnExtraMoney2);
+            Controls.Add(btnExtraMoney);
+            Controls.Add(pictureBox4);
             Controls.Add(btnWheelBuy);
             Controls.Add(pictureBox3);
             Controls.Add(btnBigSword);
@@ -160,6 +210,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -175,5 +227,9 @@
         private Button btnBigSword;
         private PictureBox pictureBox3;
         private Button btnWheelBuy;
+        private PictureBox pictureBox4;
+        private Button btnExtraMoney;
+        private Button btnExtraMoney2;
+        private PictureBox pictureBox5;
     }
 }

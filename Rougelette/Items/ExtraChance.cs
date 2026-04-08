@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Rougelette.Items
 {
-    public sealed class ExtraMoney : Item
+    public sealed class ExtraLife : Item
     {
-        public ExtraMoney()
+        public ExtraLife()
         {
-            Name = "Extra Return from Number";
-            Price = 10;
+            Name = "Extra Chance to Roll";
+            Price = 3;
             Durability = 1;
         }
-        public int MoneyMoney()
+        public int ExtraChance()
         {
             Durability--;
             return 1;
