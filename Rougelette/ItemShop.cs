@@ -29,7 +29,6 @@ namespace Rougelette
             //Closes the form
             this.Close();
         }
-
         private void btnBigSword_Click(object sender, EventArgs e)
         {
             //Make a new bigsword and set our buyChk to the gold
@@ -37,13 +36,30 @@ namespace Rougelette
             ABigSword sword = new ABigSword();
             //Sets gold equal to gold - sword price all checking done in op overload
             gold = gold - sword;
-            if(gold != buyChk)
+            if (gold != buyChk)
             {
                 //Add the sword to list and disable the button as you can only buy each item once a game
                 shoppingList.Add(sword);
                 btnBigSword.Enabled = false;
             }
-            
+
+        }
+
+        private void btnWheelBuy_Click(object sender, EventArgs e)
+        {
+            //Make a new wheel and set our buyChk to the gold
+            int buyChk = gold;
+            Wheels wheel = new Wheels();
+            //Sets gold equal to gold - wheel price all checking done in op overload
+            gold = gold - wheel;
+            if (gold != buyChk)
+            {
+                Item returnWheel;
+                returnWheel = wheel.WheelDetermine();
+                //Add the wheel to list and disable the button as you can only buy each item once a game
+                shoppingList.Add(returnWheel);
+                btnWheelBuy.Enabled = false;
+            }
         }
     }
 }
