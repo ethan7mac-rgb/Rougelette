@@ -292,9 +292,8 @@ namespace Rougelette
                     if (ItemHelper.DurCheck(s.Durability))
                         items.Remove(s);
                 }
-<<<<<<< Updated upstream
                 //Refresh our list
-=======
+
                 if (selItem is WheelOfFortune wf)
                 {
                     int res = wf.WheelSpinRes();
@@ -324,9 +323,9 @@ namespace Rougelette
                         items.Remove(wm);
                 }
                 //Refresh our list and gold
->>>>>>> Stashed changes
                 RepopLst();
                 lblCoins.Text = gold.ToString();
+                LoseCheck();
             }
             catch(Exception ex)
             {

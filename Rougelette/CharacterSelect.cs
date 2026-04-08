@@ -55,7 +55,16 @@ namespace Rougelette
             Monkey monkey = new Monkey();
             roguelette.SetChar(monkey);
             this.DialogResult = DialogResult.OK;
-    
+
+            MainGameSwap();
+        }
+
+        private void btnTrustfuncSelect_Click(object sender, EventArgs e)
+        {
+            TrustFund trustfund = new TrustFund();
+            roguelette.SetChar(trustfund);
+            this.DialogResult = DialogResult.OK;
+
             MainGameSwap();
         }
     }
