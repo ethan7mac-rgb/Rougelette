@@ -38,13 +38,17 @@
             picChar3 = new PictureBox();
             lblCharDesc3 = new Label();
             btnMonkeySelect = new Button();
-            pictureBox1 = new PictureBox();
+            picChar4 = new PictureBox();
             btnTrustfuncSelect = new Button();
             lblCharDesc4 = new Label();
+            btnWretchSelect = new Button();
+            lblCharDesc5 = new Label();
+            picChar5 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picChar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picChar2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picChar3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picChar4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picChar5).BeginInit();
             SuspendLayout();
             // 
             // picChar1
@@ -146,13 +150,13 @@
             btnMonkeySelect.UseVisualStyleBackColor = true;
             btnMonkeySelect.Click += btnMonkeySelect_Click;
             // 
-            // pictureBox1
+            // picChar4
             // 
-            pictureBox1.Location = new Point(722, 20);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(192, 129);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
+            picChar4.Location = new Point(722, 20);
+            picChar4.Name = "picChar4";
+            picChar4.Size = new Size(192, 129);
+            picChar4.TabIndex = 10;
+            picChar4.TabStop = false;
             // 
             // btnTrustfuncSelect
             // 
@@ -176,16 +180,49 @@
             lblCharDesc4.Text = "Nepotism is Cool";
             lblCharDesc4.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnWretchSelect
+            // 
+            btnWretchSelect.Location = new Point(941, 241);
+            btnWretchSelect.Margin = new Padding(4, 5, 4, 5);
+            btnWretchSelect.Name = "btnWretchSelect";
+            btnWretchSelect.Size = new Size(192, 44);
+            btnWretchSelect.TabIndex = 15;
+            btnWretchSelect.Text = "Select the Wretch";
+            btnWretchSelect.UseVisualStyleBackColor = true;
+            btnWretchSelect.Click += btnWretchSelect_Click;
+            // 
+            // lblCharDesc5
+            // 
+            lblCharDesc5.ForeColor = SystemColors.ButtonHighlight;
+            lblCharDesc5.Location = new Point(941, 154);
+            lblCharDesc5.Margin = new Padding(4, 0, 4, 0);
+            lblCharDesc5.Name = "lblCharDesc5";
+            lblCharDesc5.Size = new Size(192, 84);
+            lblCharDesc5.TabIndex = 14;
+            lblCharDesc5.Text = "Pain is Gain";
+            lblCharDesc5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // picChar5
+            // 
+            picChar5.Location = new Point(941, 20);
+            picChar5.Name = "picChar5";
+            picChar5.Size = new Size(192, 129);
+            picChar5.TabIndex = 13;
+            picChar5.TabStop = false;
+            // 
             // frmCharacterSelect
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1259, 750);
+            ClientSize = new Size(1159, 750);
+            Controls.Add(btnWretchSelect);
+            Controls.Add(lblCharDesc5);
+            Controls.Add(picChar5);
             Controls.Add(btnTrustfuncSelect);
             Controls.Add(lblCharDesc4);
-            Controls.Add(pictureBox1);
+            Controls.Add(picChar4);
             Controls.Add(btnMonkeySelect);
             Controls.Add(lblCharDesc3);
             Controls.Add(picChar3);
@@ -201,7 +238,8 @@
             ((System.ComponentModel.ISupportInitialize)picChar1).EndInit();
             ((System.ComponentModel.ISupportInitialize)picChar2).EndInit();
             ((System.ComponentModel.ISupportInitialize)picChar3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picChar4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picChar5).EndInit();
             ResumeLayout(false);
         }
 
@@ -216,8 +254,11 @@
         private PictureBox picChar3;
         private Label lblCharDesc3;
         private Button btnMonkeySelect;
-        private PictureBox pictureBox1;
+        private PictureBox picChar4;
         private Button btnTrustfuncSelect;
         private Label lblCharDesc4;
+        private Button btnWretchSelect;
+        private Label lblCharDesc5;
+        private PictureBox picChar5;
     }
 }

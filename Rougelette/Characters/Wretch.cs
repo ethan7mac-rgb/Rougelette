@@ -11,7 +11,7 @@ namespace Rougelette.Characters
         public Wretch()
         {
             Name = "Wretch";
-            StartingMoney = 0;
+            StartingMoney = 2;
             Min = 0;
             Max = 36;
         }
