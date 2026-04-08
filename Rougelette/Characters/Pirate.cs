@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Rougelette.Characters
 {
-    public sealed class Cowboy : Character
+    public sealed class Pirate : Character
     {
-        public Cowboy()
+        public Pirate()
         {
-            Name = "Cowboy";
-            StartingMoney = 6;
+            Name = "Pirate";
+            StartingMoney = 12;
             Min = 0;
-            Max = 6;
+            Max = 10;
         }
 
         public override int Spin()
         {
             Random rand = new Random();
-            int rolledNum = rand.Next(Min, Max+1);
+            int rolledNum = rand.Next(Min, Max + 1);
             return rolledNum;
         }
     }

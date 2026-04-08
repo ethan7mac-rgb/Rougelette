@@ -8,6 +8,7 @@ namespace Rougelette.Characters
 {
     public abstract class Character
     {
+        //Props for all characters
         public string Name { get; set; }
 
         public int StartingMoney { get; set; }
