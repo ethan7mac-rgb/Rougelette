@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Rougelette.Characters
 {
-    public sealed class Monkey : Character
+    public sealed class TrustFund : Character
     {
-        public Monkey()
+        public TrustFund()
         {
-            // I think it would be cool if monkey had poor money and max values but a starting item is a really good one to balancce it out
-            Name = "Monkey";
-            StartingMoney = 1;
+            Name = "TrustFund";
+            StartingMoney = 50;
             Min = 0;
-            Max = 4;
+            Max = 36;
         }
 
         public override int Spin()
