@@ -15,8 +15,6 @@ namespace Rougelette.Items
             else
                 return false;
         }
-<<<<<<< Updated upstream:Rougelette/ItemHelper.cs
-=======
         public static bool CoinFlip()
         {
             Random rand = new Random();
@@ -29,6 +27,5 @@ namespace Rougelette.Items
                     return false;
             }
         }
->>>>>>> Stashed changes:Rougelette/Items/ItemHelper.cs
     }
 }
