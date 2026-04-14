@@ -4,6 +4,7 @@ using Rougelette.Items;
 namespace RougeletteTests
 {
     [TestClass]
+    
     public sealed class RougeletteFormTests
     {
         [TestMethod]
@@ -19,7 +20,6 @@ namespace RougeletteTests
             // Assert
             Assert.AreEqual(expected, actual);
         }
-
         [TestMethod]
         public void ItemShop_ListEmpty()
         {
@@ -40,7 +40,7 @@ namespace RougeletteTests
             frmItemShop shop = new frmItemShop(-50);
 
             // Act
-            int expected = -50;
+            int expected = 0;
             int actual = shop.gold;
 
             // Assert

@@ -9,18 +9,21 @@ namespace Rougelette.Items
 {
     public class Wheels : Item
     {
+        //Constructor
         public Wheels()
         {
             Name = "The Wheel";
             Price = 4;
             Durability = 2;
         }
+        //S{ins the wheel
         public int WheelSpin()
         {
             Durability--;
             Random rand = new Random();
             return rand.Next(1, 7);
         }
+        //Determines the wheel you get
         public Item WheelDetermine()
         {
             Wheels wheel;
