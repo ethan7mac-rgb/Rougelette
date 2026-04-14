@@ -153,7 +153,7 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Image = Properties.Resources.spin1;
+            pictureBox4.Image = Properties.Resources.momoney;
             pictureBox4.Location = new Point(350, 208);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
@@ -186,7 +186,7 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.Image = Properties.Resources.spin1;
+            pictureBox5.Image = Properties.Resources.momoney2;
             pictureBox5.Location = new Point(175, 346);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
@@ -197,7 +197,7 @@
             // 
             // pictureBox6
             // 
-            pictureBox6.Image = Properties.Resources.spin1;
+            pictureBox6.Image = Properties.Resources.life;
             pictureBox6.Location = new Point(10, 346);
             pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
