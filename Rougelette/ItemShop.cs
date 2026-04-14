@@ -20,8 +20,15 @@ namespace Rougelette
         public frmItemShop(int inGold)
         {
             InitializeComponent();
-            //Set this forms gold = to the form opening this gold
-            gold = inGold;
+            //Set this forms gold = to the form opening this gold and checks it is above 0
+            if(inGold > 0)
+                gold = inGold; 
+            else
+                gold = 0;
+
+            if (gold <= 0)
+                this.Close();
+            lblCoins.Text = gold.ToString();
         }
 
         private void btnRouge_Click(object sender, EventArgs e)
@@ -38,11 +45,9 @@ namespace Rougelette
             gold = gold - sword;
             if (gold != buyChk)
             {
-                //Add the sword to list and disable the button as you can only buy each item once a game
                 shoppingList.Add(sword);
-                btnBigSword.Enabled = false;
             }
-
+            UpdateGold();
         }
 
         private void btnWheelBuy_Click(object sender, EventArgs e)
@@ -56,10 +61,9 @@ namespace Rougelette
             {
                 Item returnWheel;
                 returnWheel = wheel.WheelDetermine();
-                //Add the wheel to list and disable the button as you can only buy each item once a game
                 shoppingList.Add(returnWheel);
-                btnWheelBuy.Enabled = false;
             }
+            UpdateGold();
         }
 
         private void btnExtraMoney_Click(object sender, EventArgs e)
@@ -70,10 +74,9 @@ namespace Rougelette
             gold = gold - money;
             if (gold != buyChk)
             {
-                //Add the ExtraMoney to list and disable the button as you can only buy each item once a game
                 shoppingList.Add(money);
-                btnExtraMoney.Enabled = false;
             }
+            UpdateGold();
         }
 
         private void btnExtraMoney2_Click(object sender, EventArgs e)
@@ -84,10 +87,9 @@ namespace Rougelette
             gold = gold - money2;
             if (gold != buyChk)
             {
-                //Add the ExtraMoney to list and disable the button as you can only buy each item once a game
                 shoppingList.Add(money2);
-                btnExtraMoney2.Enabled = false;
             }
+            UpdateGold();
         }
 
         private void btnExtraLife_Click(object sender, EventArgs e)
@@ -98,10 +100,14 @@ namespace Rougelette
             gold = gold - life;
             if (gold != buyChk)
             {
-                //Add the ExtraMoney to list and disable the button as you can only buy each item once a game
                 shoppingList.Add(life);
-                btnExtraLife.Enabled = false;
             }
+            UpdateGold();
+        }
+
+        private void UpdateGold()
+        {
+            lblCoins.Text = gold.ToString();
         }
     }
 }
