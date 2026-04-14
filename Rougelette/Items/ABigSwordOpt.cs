@@ -17,7 +17,7 @@ namespace Rougelette.Items
         {
             InitializeComponent();
         }
-
+        //This all just gets your selection
         private void btnGold_Click(object sender, EventArgs e)
         {
             sel = 1;

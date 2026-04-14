@@ -81,6 +81,7 @@ namespace Rougelette
 
         private void btnChrisSelect_Click(object sender, EventArgs e)
         {
+            //creates chris obj and sends to main
             Chris chris = new Chris();
             roguelette.SetChar(chris);
             this.DialogResult = DialogResult.OK;

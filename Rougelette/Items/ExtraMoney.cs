@@ -8,12 +8,14 @@ namespace Rougelette.Items
 {
     public sealed class ExtraMoney : Item
     {
+        //Constructor
         public ExtraMoney()
         {
             Name = "Extra Return from Number";
             Price = 10;
             Durability = 1;
         }
+        //Just returns 1
         public int MoneyMoney()
         {
             Durability--;

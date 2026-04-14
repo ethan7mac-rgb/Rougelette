@@ -43,6 +43,7 @@
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             btnExtraLife = new Button();
+            lstItems = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -122,7 +123,7 @@
             btnBigSword.Location = new Point(10, 277);
             btnBigSword.Margin = new Padding(3, 2, 3, 2);
             btnBigSword.Name = "btnBigSword";
-            btnBigSword.Size = new Size(113, 38);
+            btnBigSword.Size = new Size(113, 53);
             btnBigSword.TabIndex = 19;
             btnBigSword.Text = "Buy A Big Sword\r\n2 Gold";
             btnBigSword.UseVisualStyleBackColor = true;
@@ -144,7 +145,7 @@
             btnWheelBuy.Location = new Point(175, 277);
             btnWheelBuy.Margin = new Padding(3, 2, 3, 2);
             btnWheelBuy.Name = "btnWheelBuy";
-            btnWheelBuy.Size = new Size(134, 38);
+            btnWheelBuy.Size = new Size(134, 53);
             btnWheelBuy.TabIndex = 21;
             btnWheelBuy.Text = "Buy Random Wheel\r\n4 Gold";
             btnWheelBuy.UseVisualStyleBackColor = true;
@@ -156,7 +157,7 @@
             pictureBox4.Location = new Point(350, 208);
             pictureBox4.Margin = new Padding(3, 2, 3, 2);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(192, 64);
+            pictureBox4.Size = new Size(128, 64);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 22;
             pictureBox4.TabStop = false;
@@ -166,30 +167,30 @@
             btnExtraMoney.Location = new Point(350, 277);
             btnExtraMoney.Margin = new Padding(3, 2, 3, 2);
             btnExtraMoney.Name = "btnExtraMoney";
-            btnExtraMoney.Size = new Size(192, 38);
+            btnExtraMoney.Size = new Size(128, 53);
             btnExtraMoney.TabIndex = 23;
-            btnExtraMoney.Text = "Buy Extra Return from Number 10  Gold";
+            btnExtraMoney.Text = "Buy Extra Return from Number \r\n10  Gold";
             btnExtraMoney.UseVisualStyleBackColor = true;
             btnExtraMoney.Click += btnExtraMoney_Click;
             // 
             // btnExtraMoney2
             // 
-            btnExtraMoney2.Location = new Point(561, 277);
+            btnExtraMoney2.Location = new Point(175, 416);
             btnExtraMoney2.Margin = new Padding(3, 2, 3, 2);
             btnExtraMoney2.Name = "btnExtraMoney2";
-            btnExtraMoney2.Size = new Size(192, 38);
+            btnExtraMoney2.Size = new Size(134, 53);
             btnExtraMoney2.TabIndex = 24;
-            btnExtraMoney2.Text = "Buy Extra Return from Colour 10  Gold";
+            btnExtraMoney2.Text = "Buy Extra Return from Colour \r\n10  Gold";
             btnExtraMoney2.UseVisualStyleBackColor = true;
             btnExtraMoney2.Click += btnExtraMoney2_Click;
             // 
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.spin1;
-            pictureBox5.Location = new Point(561, 208);
+            pictureBox5.Location = new Point(175, 346);
             pictureBox5.Margin = new Padding(3, 2, 3, 2);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(192, 64);
+            pictureBox5.Size = new Size(134, 64);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 25;
             pictureBox5.TabStop = false;
@@ -216,12 +217,22 @@
             btnExtraLife.UseVisualStyleBackColor = true;
             btnExtraLife.Click += btnExtraLife_Click;
             // 
+            // lstItems
+            // 
+            lstItems.FormattingEnabled = true;
+            lstItems.ItemHeight = 15;
+            lstItems.Location = new Point(572, 211);
+            lstItems.Name = "lstItems";
+            lstItems.Size = new Size(216, 454);
+            lstItems.TabIndex = 28;
+            // 
             // frmItemShop
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
             ClientSize = new Size(800, 690);
+            Controls.Add(lstItems);
             Controls.Add(btnExtraLife);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
@@ -266,5 +277,6 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private Button btnExtraLife;
+        private ListBox lstItems;
     }
 }

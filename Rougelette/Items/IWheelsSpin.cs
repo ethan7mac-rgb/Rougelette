@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rougelette.Items
 {
+    //Blueprint for wheels
     internal interface IWheelsSpin
     {
         public int WheelSpinRes();

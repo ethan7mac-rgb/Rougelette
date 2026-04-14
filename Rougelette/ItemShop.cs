@@ -25,10 +25,11 @@ namespace Rougelette
                 gold = inGold; 
             else
                 gold = 0;
-
+            //If you cant afford an item it just closes
             if (gold <= 0)
                 this.Close();
-            lblCoins.Text = gold.ToString();
+            //Refresh
+            RefreshDisplay();
         }
 
         private void btnRouge_Click(object sender, EventArgs e)
@@ -43,11 +44,14 @@ namespace Rougelette
             ABigSword sword = new ABigSword();
             //Sets gold equal to gold - sword price all checking done in op overload
             gold = gold - sword;
+            //Check if you can afford it
             if (gold != buyChk)
             {
+                //If you can add it to list
                 shoppingList.Add(sword);
             }
-            UpdateGold();
+            //Refresh
+            RefreshDisplay();
         }
 
         private void btnWheelBuy_Click(object sender, EventArgs e)
@@ -57,57 +61,76 @@ namespace Rougelette
             Wheels wheel = new Wheels();
             //Sets gold equal to gold - wheel price all checking done in op overload
             gold = gold - wheel;
+            //Check if you can afford it
             if (gold != buyChk)
             {
+                //If you can add it to list
                 Item returnWheel;
+                //Determines the wheel you get
                 returnWheel = wheel.WheelDetermine();
                 shoppingList.Add(returnWheel);
             }
-            UpdateGold();
+            //Refresh
+            RefreshDisplay();
         }
 
         private void btnExtraMoney_Click(object sender, EventArgs e)
         {
+            //Make a new ExtraMoney and set our buyChk to the gold
             int buyChk = gold;
             ExtraMoney money = new ExtraMoney();
-
+            //Sets gold equal to gold - money price all checking done in op overload
             gold = gold - money;
+            //Check if you can afford it
             if (gold != buyChk)
             {
+                //If you can add it to list
                 shoppingList.Add(money);
             }
-            UpdateGold();
+            //Refresh
+            RefreshDisplay();
         }
 
         private void btnExtraMoney2_Click(object sender, EventArgs e)
         {
+            //Make a new ExtraMoney2 and set our buyChk to the gold
             int buyChk = gold;
             ExtraMoney2 money2 = new ExtraMoney2();
-
+            //Sets gold equal to gold - money2 price all checking done in op overload
             gold = gold - money2;
+            //Check if you can afford it
             if (gold != buyChk)
             {
+                //If you can add it to list
                 shoppingList.Add(money2);
             }
-            UpdateGold();
+            //Refresh
+            RefreshDisplay();
         }
 
         private void btnExtraLife_Click(object sender, EventArgs e)
         {
+            //Make a new ExtraLife and set our buyChk to the gold
             int buyChk = gold;
             ExtraLife life = new ExtraLife();
-
+            //Sets gold equal to gold - life price all checking done in op overload
             gold = gold - life;
+            //Check if you can afford it
             if (gold != buyChk)
             {
+                //If you can add it to list
                 shoppingList.Add(life);
             }
-            UpdateGold();
+            //Refresh
+            RefreshDisplay();
         }
-
-        private void UpdateGold()
+        //Helper method for refreshing the display elements
+        private void RefreshDisplay()
         {
             lblCoins.Text = gold.ToString();
+            lstItems.Items.Clear();
+            foreach (Item i in shoppingList)
+                lstItems.Items.Add(i);
         }
     }
 }
